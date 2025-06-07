@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Squadrons>
+	<Squadron id="II./JG3" name="Jagdgeschwader 3" side="Axis" service="Luftwaffe" Experience="1.0">
+		<icon>data/images/squadrons/JG3.png</icon>
+		<Type>Fighter</Type>
+		<Aircraft>
+			<Type date="1942-05-01" name="bf109f4"/>
+		</Aircraft>
+		<Relocations>
+			<Move date="1942-07-21" airfield="Oblivskaya" />
+			<Move date="1942-08-12" airfield="Zryansky" />
+		</Relocations>
+	</Squadron>
+	
+	<Squadron id="I./StG 77" name="Sturzkampfgeschwader 77" side="Axis" service="Luftwaffe" Experience="1.0">
+		<icon>data/images/squadrons/StG77.png</icon>
+		<Type>Ground Attack</Type>
+		<Aircraft>
+			<Type date="1942-05-01" name="ju87d3"/>
+		</Aircraft>
+		<Relocations>
+			<Move date="1942-07-21" airfield="Oblivskaya" />
+			<Move date="1942-08-18" airfield="Skvorin" />
+		</Relocations>
+	</Squadron>
+	
+	<Squadron id="22GCT" name="22° Gruppo Caccia Terrestre" side="Axis" service="Regia" Experience="0.8">
+		<icon>data/images/squadrons/22GCT.png</icon>
+		<Type>Fighter</Type>
+		<Aircraft>
+			<Type date="1942-05-01" name="mc202s8"/>
+		</Aircraft>
+		<Relocations>
+			<Move date="1942-07-21" airfield="Surovikino" />
+			<Move date="1942-08-18" airfield="Skvorin" />
+		</Relocations>
+	</Squadron>
+	
+	<Squadron id="296 IAP" name="296th Fighter Aviation Regiment" side="Allies" service="VVS" Experience="0.4">
+		<icon>data/images/squadrons/296IAP.png</icon>
+		<Type>Fighter</Type>
+		<Aircraft>
+			<Type date="1942-05-01" name="yak1s69"/>
+		</Aircraft>
+		<Relocations>
+			<Move date="1942-07-21" airfield="Gromoslavka" />
+			<Move date="1942-08-18" airfield="Beketovka" />
+		</Relocations>
+	</Squadron>
+	
+	<Squadron id="8 GShAP" name="8th Guards Assault Aviation Regiment" side="Allies" service="VVS" Experience="0.3">
+		<icon>data/images/squadrons/8GShAP.png</icon>
+		<Type>Ground Attack</Type>
+		<Aircraft>
+			<Type date="1942-05-01" name="il2m42"/>
+		</Aircraft>
+		<Relocations>
+			<Move date="1942-07-21" airfield="Grachi" />
+			<Move date="1942-08-09" airfield="Bol.Chapurniki" />
+		</Relocations>
+	</Squadron>
+
+	<Squadron id="GC3" name="Groupe de Chasse 3" side="Allies" service="Normandie" Experience="1.0">
+		<icon>data/images/squadrons/GC3.png</icon>
+		<Type>Fighter</Type>
+		<Aircraft>
+			<Type date="1942-05-01" name="yak1s69"/>
+		</Aircraft>
+		<Relocations>
+			<Move date="1942-07-21" airfield="Golubinskiy" />
+			<Move date="1942-08-18" airfield="Karpovka" />
+		</Relocations>
+	</Squadron>
+</Squadrons>

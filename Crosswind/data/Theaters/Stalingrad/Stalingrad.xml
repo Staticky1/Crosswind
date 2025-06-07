@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Theater name="Theater_Stalingrad" index="0">
+	<path>data/Theaters/Stalingrad/</path>
+	<WorldMapSize width="358400" height="230400" />
+	<MapTextureSize width="5698" height="3658" />
+	<MapTexturePath>data/images/maps/StalingradMap.jpg</MapTexturePath>
+	<Services>
+		<AirService id="VVS" side="Allies" icon="data/images/services/VVS.jpg" nationality="Russia" pictures="Russian">
+			<Ranks>
+				<Rank id="VVS_szt" name="Serzhant" abbreviation="Szt." level="1" minScoreRequirement="0" />
+				<Rank id="VVS_sszt" name="Starshy Serzhant" abbreviation="SSzt." level="2" minScoreRequirement="10"/>
+				<Rank id="VVS_mlt" name="Mládshiy Leytenant" abbreviation="Mlt." level="3" minScoreRequirement="20"/>
+				<Rank id="VVS_lt" name="Leytenant" abbreviation="Lt." level="4" minScoreRequirement="40"/>
+				<Rank id="VVS_slt" name="Starshiy Leytenant" abbreviation="SLt." level="5" minScoreRequirement="70"/>
+				<Rank id="VVS_capt" name="Kapitan" abbreviation="Kapt." level="6" minScoreRequirement="100"/>
+				<Rank id="VVS_maj" name="Mayor" abbreviation="Maj." level="7" minScoreRequirement="150"/>
+			</Ranks>
+		</AirService>
+		<AirService id="Normandie" side="Allies" icon="data/images/services/Normandie.jpg" nationality="France" pictures="British">
+			<Ranks>
+				<Rank id="Normandie_slt" name="Sous-lieutenant" abbreviation="Slt." level="1" minScoreRequirement="0"/>
+				<Rank id="Normandie_lt" name="Lieutenant" abbreviation="Lt." level="2" minScoreRequirement="20"/>
+				<Rank id="Normandie_cne" name="Capitaine" abbreviation="Cne." level="3" minScoreRequirement="40"/>
+				<Rank id="Normandie_cmdt" name="Commandant" abbreviation="Cmdt." level="4" minScoreRequirement="85"/>
+				<Rank id="Normandie_ltcol" name="Lieutenant-colonel" abbreviation="Lt.Col." level="5" minScoreRequirement="150"/>
+			</Ranks>
+		</AirService>
+		<AirService id="Luftwaffe" side="Axis" icon="data/images/services/Luftwaffe.jpg" nationality="Germany" pictures="German">
+			<Ranks>
+				<Rank id="Luft_uftz" name="Unterfeldwebel" abbreviation="Uffz." level="1" minScoreRequirement="0"/>
+				<Rank id="Luft_fw" name="Feldwebel" abbreviation="Fw." level="2" minScoreRequirement="10"/>
+				<Rank id="Luft_ofw" name="Oberfeldwebel" abbreviation="Ofw." level="3" minScoreRequirement="20"/>
+				<Rank id="Luft_lt" name="Leutnant" abbreviation="Lt." level="4" minScoreRequirement="40"/>
+				<Rank id="Luft_olt" name="Oberleutnant" abbreviation="OLt." level="5" minScoreRequirement="60"/>
+				<Rank id="Luft_hptm" name="Hauptmann" abbreviation="Hptm." level="6" minScoreRequirement="120"/>
+				<Rank id="Luft_maj" name="Major" abbreviation="Maj." level="7" minScoreRequirement="180"/>
+			</Ranks>
+		</AirService>
+		<AirService id="Regia" side="Axis" icon="data/images/services/RA.jpg" nationality="Italy" pictures="Italian">
+			<Ranks>
+				<Rank id="Regia_sgt" name="Sergente" abbreviation="Sgt." level="1" minScoreRequirement="0"/>
+				<Rank id="Regia_smagg" name="Sergente Maggiore" abbreviation="S.Magg." level="2" minScoreRequirement="12"/>
+				<Rank id="Regia_m" name="Maresciallo" abbreviation="M." level="3" minScoreRequirement="22"/>
+				<Rank id="Regia_sten" name="Sottotenente" abbreviation="S.Ten." level="4" minScoreRequirement="44"/>
+				<Rank id="Regia_ten" name="Tenente" abbreviation="Ten." level="5" minScoreRequirement="62"/>
+				<Rank id="Regia_cap" name="Capitano" abbreviation="Cap." level="6" minScoreRequirement="90"/>
+				<Rank id="Regia_magg" name="Maggiore" abbreviation="Magg." level="7" minScoreRequirement="150"/>
+			</Ranks>
+		</AirService>
+	</Services>
+	<Phases>
+		<Phase name="Phase_GermanAdvanceToDon">
+			<StartDate>1942-07-21</StartDate>
+			<Description>The German 6th Army begins its advance toward the Don River, marking the opening phase of the Stalingrad campaign.</Description>
+
+			<Frontlines>
+				<Update date="1942-07-21" file="frontlines/19420721.xml" />
+				<Update date="1942-07-28" file="frontlines/19420728.xml" />
+				<Update date="1942-08-01" file="frontlines/19420801.xml" />
+				<Update date="1942-08-05" file="frontlines/19420805.xml" />
+				<Update date="1942-08-09" file="frontlines/19420809.xml" />
+				<Update date="1942-08-12" file="frontlines/19420812.xml" />
+				<Update date="1942-08-18" file="frontlines/19420818.xml" />
+			</Frontlines>
+			
+		</Phase>
+		<Phase name="Phase_GermanAdvanceOnVolga">
+			<StartDate>1942-08-23</StartDate>
+			<Description>The German 6th Army continues its advance toward Stalingrad, closing in on the Volga River.</Description>
+
+			<Frontlines>
+				<Update date="1942-08-23" file="frontlines/1942_07_21.xml" />
+			</Frontlines>
+
+		</Phase>
+		<!-- Additional phases can go here -->
+	</Phases>
+</Theater>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<planes>
+	<plane type="bf109f4">
+		<archType>bf109</archType>
+		<side>AXIS</side>
+		<primaryUsedBy>
+			<country>GERMANY</country>
+		</primaryUsedBy>
+		<stockModifications>
+			<modification name="ARMORED_WINDSCREEN" startDate="1942-02-05" />
+		</stockModifications>
+		<displayName>Bf 109 F-4</displayName>
+		<script>LuaScripts\WorldObjects\Planes\bf109f4.txt</script>
+		<model>graphics\planes\bf109f4\bf109f4.mgm</model>
+		<desc></desc>
+		<cruisingSpeed>360</cruisingSpeed>
+		<climbOutRate>1200</climbOutRate>
+		<goodness>35</goodness>
+		<range>600</range>
+		<isFlyable>true</isFlyable>
+		<isNovice>false</isNovice>
+		<planeSize>PLANE_SIZE_SMALL</planeSize>
+		<roleCategories>
+			<role>FIGHTER</role>
+			<role>ATTACK</role>
+		</roleCategories>
+		<introduction>1941-10-01</introduction>
+		<endProduction>1942-08-01</endProduction>
+		<withdrawal>1943-01-01</withdrawal>
+		<tacCodeType>NUMBER</tacCodeType>
+	</plane>
+	<plane type="yak1s69">
+		<archType>yak</archType>
+		<side>ALLIED</side>
+		<primaryUsedBy>
+			<country>RUSSIA</country>
+		</primaryUsedBy>
+		<stockModifications>
+			<modification startDate="1942-06-01">RPK10</modification>
+		</stockModifications>
+		<displayName>Yak-1 ser.69</displayName>
+		<script>LuaScripts\WorldObjects\Planes\yak1s69.txt</script>
+		<model>graphics\planes\yak1s69\yak1s69.mgm</model>
+		<desc />
+		<cruisingSpeed>350</cruisingSpeed>
+		<climbOutRate>1300</climbOutRate>
+		<goodness>45</goodness>
+		<range>600</range>
+		<isFlyable>true</isFlyable>
+		<isNovice>false</isNovice>
+		<planeSize>PLANE_SIZE_SMALL</planeSize>
+		<roleCategories>
+			<role>FIGHTER</role>
+			<role>ATTACK</role>
+		</roleCategories>
+		<introduction>1941-09-01</introduction>
+		<endProduction>1942-09-01</endProduction>
+		<withdrawal>1943-02-01</withdrawal>
+		<tacCodeType>NUMBER</tacCodeType>
+	</plane>
+	<plane type="ju87d3">
+		<archType>ju87</archType>
+		<side>AXIS</side>
+		<primaryUsedBy>
+			<country>GERMANY</country>
+		</primaryUsedBy>
+		<stockModifications>
+			<modification name="SIREN" startDate="1941-06-01" endDate="1942-06-01" />
+			<modification name="ADDITIONAL_ARMOR" startDate="1942-01-01" />
+		</stockModifications>
+		<displayName>Ju 87 D-3</displayName>
+		<script>LuaScripts\WorldObjects\Planes\ju87d3.txt</script>
+		<model>graphics\planes\ju87d3\ju87d3.mgm</model>
+		<desc />
+		<cruisingSpeed>200</cruisingSpeed>
+		<climbOutRate>600</climbOutRate>
+		<goodness>25</goodness>
+		<range>500</range>
+		<isFlyable>true</isFlyable>
+		<isNovice>true</isNovice>
+		<planeSize>PLANE_SIZE_MEDIUM</planeSize>
+		<roleCategories>
+			<role>ATTACK</role>
+		</roleCategories>
+		<introduction>1941-06-01</introduction>
+		<endProduction>1945-06-01</endProduction>
+		<withdrawal>1945-06-01</withdrawal>
+		<tacCodeType>NUMBER</tacCodeType>
+	</plane>
+	<plane type="il2m42">
+		<archType>il2</archType>
+		<side>ALLIED</side>
+		<primaryUsedBy>
+			<country>RUSSIA</country>
+		</primaryUsedBy>
+		<stockModifications />
+		<displayName>Il-2 mod.1942</displayName>
+		<script>LuaScripts\WorldObjects\Planes\il2m42.txt</script>
+		<model>graphics\planes\il2m42\il2m42.mgm</model>
+		<desc />
+		<cruisingSpeed>300</cruisingSpeed>
+		<climbOutRate>700</climbOutRate>
+		<goodness>25</goodness>
+		<range>650</range>
+		<isFlyable>true</isFlyable>
+		<isNovice>true</isNovice>
+		<planeSize>PLANE_SIZE_MEDIUM</planeSize>
+		<roleCategories>
+			<role>ATTACK</role>
+		</roleCategories>
+		<introduction>1942-03-01</introduction>
+		<endProduction>1943-04-01</endProduction>
+		<withdrawal>1943-07-01</withdrawal>
+		<tacCodeType>NUMBER</tacCodeType>
+	</plane>
+	<plane type="mc202s8">
+		<archType>mc200</archType>
+		<side>AXIS</side>
+		<primaryUsedBy>
+			<country>ITALY</country>
+		</primaryUsedBy>
+		<stockModifications>
+			<modification name="ARMORED_WINDSCREEN" startDate="1942-03-01"/>
+		</stockModifications>
+		<displayName>MC.202 ser.VIII</displayName>
+		<script>LuaScripts\WorldObjects\Planes\mc202s8.txt</script>
+		<model>graphics\planes\mc202s8\mc202s8.mgm</model>
+		<desc />
+		<cruisingSpeed>350</cruisingSpeed>
+		<climbOutRate>1100</climbOutRate>
+		<goodness>35</goodness>
+		<range>700</range>
+		<isFlyable>true</isFlyable>
+		<isNovice>false</isNovice>
+		<planeSize>PLANE_SIZE_SMALL</planeSize>
+		<roleCategories>
+			<role>FIGHTER</role>
+			<role>ATTACK</role>
+		</roleCategories>
+		<introduction>1941-06-01</introduction>
+		<endProduction>1945-06-01</endProduction>
+		<withdrawal>1945-06-01</withdrawal>
+		<tacCodeType>NUMBER</tacCodeType>
+	</plane>
+</planes>

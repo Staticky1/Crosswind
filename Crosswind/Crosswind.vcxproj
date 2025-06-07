@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Dist|x64">
+      <Configuration>Dist</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{21A40790-8D0E-BC06-D64C-6DAC42F6995B}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Crosswind</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Crosswind</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\bin\Debug-windows-x86_64\Crosswind\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86_64\Crosswind\</IntDir>
+    <TargetName>Crosswind</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\Release-windows-x86_64\Crosswind\</OutDir>
+    <IntDir>..\bin-int\Release-windows-x86_64\Crosswind\</IntDir>
+    <TargetName>Crosswind</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\Dist-windows-x86_64\Crosswind\</OutDir>
+    <IntDir>..\bin-int\Dist-windows-x86_64\Crosswind\</IntDir>
+    <TargetName>Crosswind</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WL_PLATFORM_WINDOWS;WL_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\vendor\imgui;..\vendor\glfw\include;..\Walnut\Source;..\Walnut\Platform\GUI;C:\VulkanSDK\1.4.313.1\Include;..\vendor\glm;..\Crosswind\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/EHsc /Zc:preprocessor /Zc:__cplusplus /utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WL_PLATFORM_WINDOWS;WL_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\vendor\imgui;..\vendor\glfw\include;..\Walnut\Source;..\Walnut\Platform\GUI;C:\VulkanSDK\1.4.313.1\Include;..\vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/EHsc /Zc:preprocessor /Zc:__cplusplus /utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WL_PLATFORM_WINDOWS;WL_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\vendor\imgui;..\vendor\glfw\include;..\Walnut\Source;..\Walnut\Platform\GUI;C:\VulkanSDK\1.4.313.1\Include;..\vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/EHsc /Zc:preprocessor /Zc:__cplusplus /utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Walnut\Walnut.vcxproj">
+      <Project>{C038E8D9-ACDA-12B0-9595-260481D69900}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Campaign\CampaignManager.cpp" />
+    <ClCompile Include="src\Campaign\NewPilot.cpp" />
+    <ClCompile Include="src\Core.cpp" />
+    <ClCompile Include="src\Core\Airfields.cpp" />
+    <ClCompile Include="src\Core\CrosswindApp.cpp" />
+    <ClCompile Include="src\Core\EnumHelpers.cpp" />
+    <ClCompile Include="src\UI\CampaignLayer.cpp" />
+    <ClCompile Include="src\UI\CrosswindUI.cpp" />
+    <ClCompile Include="src\Core\TextureGarbageCollector.cpp" />
+    <ClCompile Include="src\Core\Theater.cpp" />
+    <ClCompile Include="src\Localization\LocalizationManager.cpp" />
+    <ClCompile Include="src\tinyxml2\tinyxml2.cpp" />
+    <ClCompile Include="src\UI\CampaignMapWidget.cpp" />
+    <ClCompile Include="src\UI\CrosswindLayer.cpp" />
+    <ClCompile Include="src\UI\CrosswindWindow.cpp" />
+    <ClCompile Include="src\UI\MainMenuUI.cpp" />
+    <ClCompile Include="src\UI\MainMenu\CreateNewCampaignPopupWindow.cpp" />
+    <ClCompile Include="src\UI\MainMenu\LoadCampaignWindow.cpp" />
+    <ClCompile Include="src\UI\MainMenu\MainMenuButtons.cpp" />
+    <ClCompile Include="src\UI\MainMenu\NewCampaignWindow.cpp" />
+    <ClCompile Include="src\UI\MainMenu\SquadronSelectionWindow.cpp" />
+    <ClCompile Include="src\UI\WalnutApp.cpp" />
+    <ClCompile Include="src\UI\Windows\CreateNewPilotWindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Campaign\CampaignManager.h" />
+    <ClInclude Include="src\Campaign\NewPilot.h" />
+    <ClInclude Include="src\Config\ConfigManager.h" />
+    <ClInclude Include="src\Core.h" />
+    <ClInclude Include="src\Core\AircraftData.h" />
+    <ClInclude Include="src\Core\Airfields.h" />
+    <ClInclude Include="src\Core\CampaignData.h" />
+    <ClInclude Include="src\Core\CrosswindApp.h" />
+    <ClInclude Include="src\Core\EnumHelpers.h" />
+    <ClInclude Include="src\UI\CampaignLayer.h" />
+    <ClInclude Include="src\UI\CampaignMenu\SquadronInfoWindow.h" />
+    <ClInclude Include="src\UI\CrosswindUI.h" />
+    <ClInclude Include="src\Core\TextureGarbageCollector.h" />
+    <ClInclude Include="src\Core\Theater.h" />
+    <ClInclude Include="src\Localization\LocalizationMacros.h" />
+    <ClInclude Include="src\Localization\LocalizationManager.h" />
+    <ClInclude Include="src\tinyxml2\tinyxml2.h" />
+    <ClInclude Include="src\UI\CampaignMapWidget.h" />
+    <ClInclude Include="src\UI\CrosswindLayer.h" />
+    <ClInclude Include="src\UI\CrosswindWindow.h" />
+    <ClInclude Include="src\UI\MainMenuUI.h" />
+    <ClInclude Include="src\UI\MainMenu\CampaignSetupData.h" />
+    <ClInclude Include="src\UI\MainMenu\CreateNewCampaignPopupWindow.h" />
+    <ClInclude Include="src\UI\MainMenu\LoadCampaignWindow.h" />
+    <ClInclude Include="src\UI\MainMenu\MainMenuButtons.h" />
+    <ClInclude Include="src\UI\MainMenu\NewCampaignWindow.h" />
+    <ClInclude Include="src\UI\MainMenu\SquadronSelectionWindow.h" />
+    <ClInclude Include="src\UI\WindowContexts\CampaignSetupContext.h" />
+    <ClInclude Include="src\UI\WindowContexts\NewPilotContext.h" />
+    <ClInclude Include="src\UI\WindowContexts\WindowContexts.h" />
+    <ClInclude Include="src\UI\Windows\CreateNewPilotWindow.h" />
+    <ClInclude Include="src\Core\PilotData.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="data\aircraft\Aircraft.xml" />
+    <Xml Include="data\Localization.xml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Xml>
+    <Xml Include="data\Theaters\Stalingrad\Airfields.xml" />
+    <Xml Include="data\Theaters\Stalingrad\frontlines\19420721.xml" />
+    <Xml Include="data\Theaters\Stalingrad\Squadrons.xml" />
+    <Xml Include="data\Theaters\Stalingrad\Stalingrad.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="data\images\icons\redstar.png" />
+    <Image Include="data\images\maps\StalingradMap.jpg" />
+    <Image Include="data\images\services\FreeFrench.jpg" />
+    <Image Include="data\images\services\Luftwaffe.jpg" />
+    <Image Include="data\images\services\Normandie.jpg" />
+    <Image Include="data\images\services\RA.jpg" />
+    <Image Include="data\images\services\RAF.jpg" />
+    <Image Include="data\images\services\RCAF.jpg" />
+    <Image Include="data\images\services\USAAF.jpg" />
+    <Image Include="data\images\services\VVS.jpg" />
+    <Image Include="data\images\squadrons\22GCT.png" />
+    <Image Include="data\images\squadrons\296IAP.png" />
+    <Image Include="data\images\squadrons\8GShAP.png" />
+    <Image Include="data\images\squadrons\GC3.png" />
+    <Image Include="data\images\squadrons\JG3.png" />
+    <Image Include="data\images\squadrons\StG77.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\names\FirstNamesGermany.txt" />
+    <Text Include="data\names\FirstNamesRussia.txt" />
+    <Text Include="data\names\FirstNamesRussiaFemale.txt" />
+    <Text Include="data\names\LastNamesGermany.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

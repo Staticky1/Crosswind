@@ -1,0 +1,944 @@
+<Campaign name="NewCampaigngar" side="Axis" currentDate="1942-07-21">
+    <currentTime>12:00</currentTime>
+    <Theater name="Theater_Stalingrad" index="0">
+        <Squadrons>
+            <Squadron id="II./JG3" name="Jagdgeschwader 3" side="Axis" service="Luftwaffe" icon="data/images/squadrons/JG3.png" initialized="true">
+                <Pilots>
+                    <Pilot playerPilot="false" name="Wendall Rosenhain" rank="Luft_maj" score="181" missions="120" female="false" icon="data/images/pilotPictures/German/German33.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_HEAVY" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_STATION" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_HEAVY" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Lothar Stirner" rank="Luft_hptm" score="229" missions="160" female="false" icon="data/images/pilotPictures/German/German10.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="BUILDING_BRIDGE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="BUILDING_BRIDGE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_HEAVY" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Agustus Krenkel" rank="Luft_olt" score="121" missions="91" female="false" icon="data/images/pilotPictures/German/German31.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_HEAVY" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_LOCOMOTIVE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Johannes Haering" rank="Luft_fw" score="19" missions="17" female="false" icon="data/images/pilotPictures/German/German16.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories/>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Ignaz Loeffler" rank="Luft_olt" score="170" missions="133" female="false" icon="data/images/pilotPictures/German/German37.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_HEAVYARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Luther Heller" rank="Luft_uftz" score="1" missions="0" female="false" icon="data/images/pilotPictures/German/German64.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Gunther Freudenberger" rank="Luft_uftz" score="6" missions="4" female="false" icon="data/images/pilotPictures/German/German02.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Oswin Musaeus" rank="Luft_uftz" score="7" missions="4" female="false" icon="data/images/pilotPictures/German/German47.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Egon Stellwagen" rank="Luft_uftz" score="7" missions="5" female="false" icon="data/images/pilotPictures/German/German29.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="VEHICLE_HEAVYARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_HEAVY" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Hermann Kresinger" rank="Luft_lt" score="52" missions="40" female="false" icon="data/images/pilotPictures/German/German66.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="true" name="Reinhold Trausch" rank="Luft_uftz" score="0" missions="0" female="false" icon="data/images/pilotPictures/German/German00.jpg" status="EPILOT_READY" wounded="0">
+                        <Background>The son of a railway station manager in Königsberg, Reinhold Trausch grew up watching freight trains vanish toward the east. he volunteered for the Luftwaffe shortly after finishing school, seeking adventure and to serve the Reich from above. he had no formal aviation experience but scored highly in spatial recognition and mathematics. During training, he developed a reputation for precise formation flying. A friend from his training unit was killed in a crash, which left a lasting impression on Reinhold Trausch.</Background>
+                        <Victories/>
+                    </Pilot>
+                </Pilots>
+                <Aircrafts>
+                    <Aircraft type="bf109f4" marking="1" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="2" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="3" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="5" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="6" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="7" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="9" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="10" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="11" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="12" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="13" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="14" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="16" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="17" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="18" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="19" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="bf109f4" marking="20" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                </Aircrafts>
+            </Squadron>
+            <Squadron id="I./StG 77" name="Sturzkampfgeschwader 77" side="Axis" service="Luftwaffe" icon="data/images/squadrons/StG77.png" initialized="true">
+                <Pilots>
+                    <Pilot playerPilot="false" name="Ernst Bronner" rank="Luft_maj" score="185" missions="153" female="false" icon="data/images/pilotPictures/German/German10.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Harald Raupach" rank="Luft_hptm" score="206" missions="165" female="false" icon="data/images/pilotPictures/German/German48.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_HEAVYARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_LOCOMOTIVE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_ROCKETLAUNCHER" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_LOCOMOTIVE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_ROCKETLAUNCHER" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_STATION" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_STATION" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_HEAVYARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_ROCKETLAUNCHER" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_STATION" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_ROCKETLAUNCHER" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Dirk Simson" rank="Luft_uftz" score="2" missions="2" female="false" icon="data/images/pilotPictures/German/German20.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories/>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Rudolph Schopfer" rank="Luft_fw" score="13" missions="12" female="false" icon="data/images/pilotPictures/German/German24.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Dirk Pilz" rank="Luft_fw" score="21" missions="16" female="false" icon="data/images/pilotPictures/German/German15.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Baldemar Nessel" rank="Luft_ofw" score="30" missions="22" female="false" icon="data/images/pilotPictures/German/German29.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Maxim Worfel" rank="Luft_uftz" score="14" missions="14" female="false" icon="data/images/pilotPictures/German/German11.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories/>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Ignaz Schaber" rank="Luft_uftz" score="9" missions="8" female="false" icon="data/images/pilotPictures/German/German17.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories/>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Marius Deutschman" rank="Luft_olt" score="116" missions="102" female="false" icon="data/images/pilotPictures/German/German17.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_LOCOMOTIVE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Sven Maibaum" rank="Luft_lt" score="82" missions="66" female="false" icon="data/images/pilotPictures/German/German21.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Meinhard Keilberth" rank="Luft_uftz" score="6" missions="6" female="false" icon="data/images/pilotPictures/German/German25.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Leon Holler" rank="Luft_ofw" score="43" missions="32" female="false" icon="data/images/pilotPictures/German/German28.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                </Pilots>
+                <Aircrafts>
+                    <Aircraft type="ju87d3" marking="1" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="3" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="4" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="5" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="6" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="7" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="9" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="10" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="11" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="12" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="13" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="14" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="15" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="16" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="ju87d3" marking="17" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                </Aircrafts>
+            </Squadron>
+            <Squadron id="22GCT" name="22° Gruppo Caccia Terrestre" side="Axis" service="Regia" icon="data/images/squadrons/22GCT.png" initialized="true">
+                <Pilots>
+                    <Pilot playerPilot="false" name="Federico Brunetti" rank="Regia_magg" score="186" missions="115" female="false" icon="data/images/pilotPictures/Italian/Italian23.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_STATION" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_HEAVYARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_STATION" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_HEAVYARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Niccolo Lombardo" rank="Regia_cap" score="182" missions="119" female="false" icon="data/images/pilotPictures/Italian/Italian15.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="BUILDING_BRIDGE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_ROCKETLAUNCHER" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="BUILDING_BRIDGE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Marcello Massa" rank="Regia_smagg" score="18" missions="12" female="false" icon="data/images/pilotPictures/Italian/Italian07.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Valentino Valenti" rank="Regia_ten" score="65" missions="41" female="false" icon="data/images/pilotPictures/Italian/Italian07.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_HEAVY" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Filippo Monti" rank="Regia_sgt" score="0" missions="0" female="false" icon="data/images/pilotPictures/Italian/Italian11.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories/>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Donato Biondi" rank="Regia_sgt" score="4" missions="3" female="false" icon="data/images/pilotPictures/Italian/Italian17.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Valentino Mauro" rank="Regia_smagg" score="22" missions="19" female="false" icon="data/images/pilotPictures/Italian/Italian27.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_STATION" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Giuseppe Rizzo" rank="Regia_smagg" score="22" missions="21" female="false" icon="data/images/pilotPictures/Italian/Italian26.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Silvio Russo" rank="Regia_sgt" score="8" missions="5" female="false" icon="data/images/pilotPictures/Italian/Italian17.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_ROCKETLAUNCHER" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                </Pilots>
+                <Aircrafts>
+                    <Aircraft type="mc202s8" marking="1" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="mc202s8" marking="3" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="mc202s8" marking="4" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="mc202s8" marking="5" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="mc202s8" marking="6" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="mc202s8" marking="7" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="mc202s8" marking="8" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="mc202s8" marking="10" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="mc202s8" marking="11" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="mc202s8" marking="12" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="mc202s8" marking="14" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="mc202s8" marking="15" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="mc202s8" marking="16" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                </Aircrafts>
+            </Squadron>
+            <Squadron id="296 IAP" name="296th Fighter Aviation Regiment" side="Allies" service="VVS" icon="data/images/squadrons/296IAP.png" initialized="true">
+                <Pilots>
+                    <Pilot playerPilot="false" name="Andrey Kozyrev" rank="VVS_maj" score="167" missions="125" female="false" icon="data/images/pilotPictures/Russian/Russian42.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_LOCOMOTIVE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="BUILDING_BRIDGE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_HEAVY" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_HEAVYARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Tikhon Boldayev" rank="VVS_capt" score="221" missions="185" female="false" icon="data/images/pilotPictures/Russian/Russian35.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_HEAVYARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Gleb Frolov" rank="VVS_szt" score="7" missions="5" female="false" icon="data/images/pilotPictures/Russian/Russian47.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Maksim Yershov" rank="VVS_szt" score="5" missions="4" female="false" icon="data/images/pilotPictures/Russian/Russian12.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="VEHICLE_HEAVYARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Artem Belyakov" rank="VVS_szt" score="5" missions="4" female="false" icon="data/images/pilotPictures/Russian/Russian43.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories/>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Ilya Khaslik" rank="VVS_szt" score="1" missions="0" female="false" icon="data/images/pilotPictures/Russian/Russian04.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Vladislav Bobrik" rank="VVS_szt" score="4" missions="3" female="false" icon="data/images/pilotPictures/Russian/Russian41.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Aleksey Belitrov" rank="VVS_sszt" score="17" missions="15" female="false" icon="data/images/pilotPictures/Russian/Russian11.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Matvey Yartsin" rank="VVS_szt" score="10" missions="9" female="false" icon="data/images/pilotPictures/Russian/Russian25.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Anatoly Essen" rank="VVS_szt" score="6" missions="4" female="false" icon="data/images/pilotPictures/Russian/Russian51.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Oleg Zhdanov" rank="VVS_szt" score="4" missions="3" female="false" icon="data/images/pilotPictures/Russian/Russian31.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Andrey Dorofeyev" rank="VVS_slt" score="115" missions="85" female="false" icon="data/images/pilotPictures/Russian/Russian39.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_STATION" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_HEAVY" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_HEAVY" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_LOCOMOTIVE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                </Pilots>
+                <Aircrafts>
+                    <Aircraft type="yak1s69" marking="21" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="22" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="23" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="24" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="25" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="27" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="28" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="29" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="30" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="31" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="32" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="33" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="34" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="35" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                </Aircrafts>
+            </Squadron>
+            <Squadron id="8 GShAP" name="8th Guards Assault Aviation Regiment" side="Allies" service="VVS" icon="data/images/squadrons/8GShAP.png" initialized="true">
+                <Pilots>
+                    <Pilot playerPilot="false" name="Vyacheslav Rayt" rank="VVS_maj" score="164" missions="151" female="false" icon="data/images/pilotPictures/Russian/Russian53.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_ROCKETLAUNCHER" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_STATION" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="BUILDING_BRIDGE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Stepan Smekhov" rank="VVS_capt" score="165" missions="134" female="false" icon="data/images/pilotPictures/Russian/Russian55.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="VEHICLE_HEAVYARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="BUILDING_BRIDGE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_LOCOMOTIVE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_HEAVY" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="BUILDING_BRIDGE" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_HEAVYARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_ROCKETLAUNCHER" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Viktor Ankudinov" rank="VVS_szt" score="10" missions="8" female="false" icon="data/images/pilotPictures/Russian/Russian10.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_AAA" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Iosif Khloponin" rank="VVS_sszt" score="12" missions="10" female="false" icon="data/images/pilotPictures/Russian/Russian04.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories/>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Maksim Rasputin" rank="VVS_szt" score="9" missions="6" female="false" icon="data/images/pilotPictures/Russian/Russian56.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Arkady  Bugakov" rank="VVS_szt" score="7" missions="5" female="false" icon="data/images/pilotPictures/Russian/Russian47.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories/>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Stanislav Budanov" rank="VVS_szt" score="13" missions="12" female="false" icon="data/images/pilotPictures/Russian/Russian32.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Denis Luski" rank="VVS_szt" score="4" missions="3" female="false" icon="data/images/pilotPictures/Russian/Russian41.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Viktoriya Toporov" rank="VVS_szt" score="11" missions="10" female="true" icon="data/images/pilotPictures/Russian/female/RussianFemale05.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Arkady  Ustimovich" rank="VVS_mlt" score="40" missions="30" female="false" icon="data/images/pilotPictures/Russian/Russian26.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Roman Slutzky" rank="VVS_lt" score="64" missions="59" female="false" icon="data/images/pilotPictures/Russian/Russian01.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                </Pilots>
+                <Aircrafts>
+                    <Aircraft type="il2m42" marking="41" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="il2m42" marking="43" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="il2m42" marking="44" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="il2m42" marking="46" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="il2m42" marking="47" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="il2m42" marking="49" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="il2m42" marking="50" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="il2m42" marking="51" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="il2m42" marking="52" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="il2m42" marking="54" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="il2m42" marking="55" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="il2m42" marking="56" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="il2m42" marking="57" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="il2m42" marking="59" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                </Aircrafts>
+            </Squadron>
+            <Squadron id="GC3" name="Groupe de Chasse 3" side="Allies" service="Normandie" icon="data/images/squadrons/GC3.png" initialized="true">
+                <Pilots>
+                    <Pilot playerPilot="false" name="Camille Labolle " rank="Normandie_ltcol" score="167" missions="154" female="false" icon="data/images/pilotPictures/British/British51.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_MG" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Jerome Farel " rank="Normandie_cmdt" score="180" missions="162" female="false" icon="data/images/pilotPictures/British/British22.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_MEDIUM" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_CANNON" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_MEDIUMARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="WEAPON_ROCKETLAUNCHER" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Alexandre Lepetre" rank="Normandie_slt" score="10" missions="8" female="false" icon="data/images/pilotPictures/British/British50.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories/>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Victor Le Doran " rank="Normandie_slt" score="18" missions="10" female="false" icon="data/images/pilotPictures/British/British36.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="VEHICLE_LIGHTARMOR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_HEAVY" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Jules Joubert " rank="Normandie_slt" score="6" missions="6" female="false" icon="data/images/pilotPictures/British/British68.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories/>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Laurent Kalandyk" rank="Normandie_slt" score="20" missions="15" female="false" icon="data/images/pilotPictures/British/British47.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="RAIL_RAILCAR" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Maxime Ignace " rank="Normandie_lt" score="47" missions="32" female="false" icon="data/images/pilotPictures/British/British20.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="VEHICLE_TRANSPORT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_LIGHT" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Jeremy de Clarens" rank="Normandie_slt" score="16" missions="12" female="false" icon="data/images/pilotPictures/British/British40.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                            <Victory type="AIRCRAFT_PARKED" itemName="Unknown" date="Unknown" location="Unknown"/>
+                        </Victories>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Richard Gayrau" rank="Normandie_slt" score="10" missions="10" female="false" icon="data/images/pilotPictures/British/British07.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories/>
+                    </Pilot>
+                    <Pilot playerPilot="false" name="Jacob Brunet " rank="Normandie_slt" score="8" missions="7" female="false" icon="data/images/pilotPictures/British/British12.jpg" status="EPILOT_READY" wounded="0">
+                        <Background></Background>
+                        <Victories/>
+                    </Pilot>
+                </Pilots>
+                <Aircrafts>
+                    <Aircraft type="yak1s69" marking="61" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="62" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="63" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="64" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="65" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="67" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="68" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="69" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="71" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="72" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="73" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="74" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="75" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="76" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="77" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="79" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                    <Aircraft type="yak1s69" marking="80" skin="" status="EAIRCRAFT_READY" maintanceDuration="0">
+                        <modifications/>
+                    </Aircraft>
+                </Aircrafts>
+            </Squadron>
+        </Squadrons>
+    </Theater>
+</Campaign>

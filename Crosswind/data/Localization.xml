@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Localization>
+	<Language code="en">
+		<String key="Title">Crosswind - IL-2 Dynamic Campaign Generator</String>
+		<String key="NewCampaign">New Campaign</String>
+		<String key="LoadCampaign">Load Campaign</String>
+		<String key="Settings">Settings</String>
+		<String key="Exit">Exit</String>
+
+		<String key="Button_Next">Next</String>
+		<String key="Button_Back">Back</String>
+		<String key="Button_Cancel">Cancel</String>
+		<String key="Button_Load">Load</String>
+		
+		<String key="pronoun_he_he">he</String>
+		<String key="pronoun_he_she">she</String>
+		<String key="Pronoun_He_He">He</String>
+		<String key="Pronoun_He_She">She</String>
+		<String key="pronounhim_him">him</String>
+		<String key="pronounhim_her">her</String>
+		<String key="PronounHim_Him">Him</String>
+		<String key="PronounHim_Her">Her</String>
+		<String key="pronounhisher_his">his</String>
+		<String key="pronounhisher_her">her</String>
+		<String key="PronounHisHer_His">His</String>
+		<String key="PronounHisHer_Her">Her</String>
+		<String key="son_dau_son">son</String>
+		<String key="son_dau_daughter">daughter</String>
+		<String key="Son_Dau_Son">Son</String>
+		<String key="Son_Dau_Daughter">Daughter</String>
+
+		<String key="EPILOT_READY">Ready</String>
+		<String key="EPILOT_ONLEAVE">On Leave</String>
+		<String key="EPILOT_WOUNDED">Wounded</String>
+		<String key="EPILOT_CAPTURED">Captured</String>
+		<String key="EPILOT_DEAD">Dead</String>
+		<String key="EAIRCRAFT_READY">Ready</String>
+		<String key="EAIRCRAFT_MAINTANCE">Maintenance</String>
+		<String key="EAIRCRAFT_UPGRADE">Upgrade</String>
+		
+		<String key="Warning_NameTooShort">Name must be at least %d characters.</String>
+		<String key="Warning_NameExists">A campaign with this name already exists.</String>
+
+		<String key="Theater_Stalingrad">Stalingrad</String>
+		<String key="Phase_GermanAdvanceToDon">German Advance to the Don</String>
+		<String key="Phase_GermanAdvanceOnVolga">German Advance on the Volga</String>
+		
+		
+		
+		<String key="NewCampaign_Title">Create New Campaign</String>
+		<String key="NewCampaign_CampaignName">Campaign Name</String>
+		<String key="NewCampaign_CampaignNameHint">Name for the campaign save file</String>
+		<String key="NewCampaign_Side">Side</String>
+		<String key="NewCampaign_Side_Allies">Allies</String>
+		<String key="NewCampaign_Side_Axis">Axis</String>
+		<String key="NewCampaign_Theater">Theater</String>
+		<String key="NewCampaign_StartingPhase">Starting Phase</String>
+		<String key="NewCampaign_StartingDate">Starting Date</String>
+		<String key="NewCampaign_Description">Description</String>
+		<String key="NewCampaign_AirService">Air Service</String>
+		<String key="NewCampaign_CreatingCampaignFile">Creating Campaign File...</String>
+
+		<String key="NewCampaign_Squadron">squadron</String>
+		<String key="SquadronType">Squadron Type:</String>
+		<String key="SquadronAircraft">Aircraft:</String>
+		<String key="SquadronAirfield">Airfield:</String>
+
+		<String key="NewPilot_Title">Create New Pilot</String>
+		<String key="NewPilot_PilotName">Pilot Name:</String>
+		<String key="NewPilot_FemalePilot">Female Pilot:</String>
+		<String key="NewPilot_FemalePilotTooltip">"The Soviet Air Force included several all-female combat regiments during WWII. Though less common, female pilots also flew in other mixed squadrons."</String>
+		<String key="NewPilot_Rank">Pilot Rank:</String>
+		<String key="NewPilot_Background">Pilot Background:</String>
+		<String key="NewPilot_EditBackground">Edit Background</String>
+		<String key="NewPilot_Image">Pilot Picture:</String>
+		
+		<!--Russian Backgrounds-->
+		<String key="VVS_PilotBackground0">Raised in a textile district of Ivanovo, {name} was the {son_or_daughter} of a mill worker and learned to fly through the local OSOAVIAKhIM club. After the German invasion, {pronoun_he} volunteered for service, driven by a deep sense of duty and outrage over the bombing of {his_her} hometown. Known for {his_her} discipline and mechanical aptitude, {pronoun_he} quickly adapted to military aviation under the VVS.</String>
+		<String key="VVS_PilotBackground1">Before the war, {name} served as a civilian glider instructor near Kazan and had earned respect for {his_her} calm demeanor and teaching skill. When hostilities began, {pronoun_he} was called up and fast-tracked into a combat role. {his_her} familiarity with flight dynamics helped {pronoun_him} excel in harsh training conditions, and {pronoun_he} now flies with the VVS, motivated by a belief in collective defense and quiet defiance.</String>
+		<String key="VVS_PilotBackground2">{name} grew up on a collective farm in the Saratov region, where {pronoun_he} helped tend the fields with {his_her} family. {His_Her} father had served in the Civil War, and stories of bravery filled the household. As a teenager, {name} became fascinated with aircraft after spotting a formation of I-16s passing overhead. {Pronoun_he} built small gliders from scrap wood and dreamed of taking to the skies. The invasion of 1941 brought war directly to their region, and the farm was burned during a German advance, hardening {his_her} resolve.</String>
+		<String key="VVS_PilotBackground3">Before the war, {name} worked in a textile factory in Ivanovo, showing mechanical aptitude and discipline. {Pronoun_he} took evening classes in technical drawing and had hoped to pursue engineering. When war came, {pronoun_he} volunteered immediately, driven by a desire to protect the homeland and avenge the bombing of their town. A cousin had been killed near Minsk in the opening months, which deeply affected {name}. {Pronoun_he} requested assignment to the VVS, hoping to strike back with precision and purpose.</String>
+		<String key="VVS_PilotBackground4">{name} was the {son_or_daughter} of a tram driver in Leningrad and a schoolteacher. {Pronoun_he} had briefly joined a local aero club before the war and showed talent for piloting. During the siege, {pronoun_he} helped carry supplies and bodies through freezing streets, witnessing the brutal cost of the war firsthand. {Pronoun_he} lost two younger siblings during that winter, an experience that shaped {his_her} determination. Flying became more than a dream, it was a form of retaliation.</String>
+		<String key="VVS_PilotBackground5">Hailing from a small village near Omsk, {name} had never seen an aircraft up close until enlisting. {Pronoun_he} spent {his_her} early years hunting with {his_her} grandfather and helping maintain farming tools. After reading articles about Soviet aces in Pravda, {pronoun_he} became inspired to serve as a pilot. When German troops approached Stalingrad, several of {his_her} relatives were displaced, which fueled {his_her} desire to act. Though inexperienced, {name} brought determination and a deep connection to the land.</String>
+		<String key="VVS_PilotBackground6">{name} was a student at a trade school in Kharkov, learning metalwork and welding. {Pronoun_he} admired the Soviet pioneers of aviation and often sketched aircraft designs in a small notebook. After German forces occupied Kharkov, {pronoun_he} escaped east with a group of volunteers, narrowly avoiding capture. {Pronoun_he} applied for flight training shortly after and was accepted into a compressed VVS program. {name} sees flying as a skill and a duty, forged equally from loss and ambition.</String>	
+		
+		<!--Luftwaffe Backgrounds-->
+		<String key="Luftwaffe_PilotBackground0">{name} was born in Leipzig and apprenticed as a mechanic before enlisting. {pronoun_he} developed a fascination with aviation while maintaining motorcycle engines for the Hitler Youth. An uncle, a veteran of the Great War, encouraged {name} to pursue flying rather than serve on the ground. {pronoun_he} excelled in technical instruction and was selected for flight training early. {his_her} hometown was struck during a Soviet bombing raid in 1941, cementing {his_her} belief in the importance of air superiority.</String>
+		<String key="Luftwaffe_PilotBackground1">The {son_or_daughter} of a railway station manager in Königsberg, {name} grew up watching freight trains vanish toward the east. {pronoun_he} volunteered for the Luftwaffe shortly after finishing school, seeking adventure and to serve the Reich from above. {pronoun_he} had no formal aviation experience but scored highly in spatial recognition and mathematics. During training, {pronoun_he} developed a reputation for precise formation flying. A friend from {his_her} training unit was killed in a crash, which left a lasting impression on {name}.</String>
+		<String key="Luftwaffe_PilotBackground2">{name} was raised in a household loyal to the Party, with a father active in local administration and a mother who taught biology. {pronoun_he} attended a National Political Institute of Education, where flight aptitude was recognized early. {pronoun_he} logged glider hours as part of the school’s curriculum and joined the Luftwaffe as soon as age permitted. The invasion of the Soviet Union seemed to {pronoun_him} a chance to prove discipline and devotion in battle. Letters from the front written by older classmates inspired {his_her} ambitions.</String>
+		<String key="Luftwaffe_PilotBackground3">Coming from a farming family near Würzburg, {name} had little contact with aircraft until enlisting. {pronoun_he} showed strong reflexes and situational awareness during basic training, and was steered toward the Luftwaffe by an instructor. Though unfamiliar with complex machinery at first, {pronoun_he} worked tirelessly to master cockpit procedures. News of Soviet advances on the Eastern Front made the war feel personal, especially after a cousin was reported missing near Smolensk. {name} carries a small photo of {his_her} siblings in the flight jacket pocket.</String>
+		<String key="Luftwaffe_PilotBackground4">Before the war, {name} had been studying architecture in Munich and spent weekends sketching buildings and airfields. {pronoun_he} joined the Luftwaffe after several classmates enlisted, feeling a mix of pressure and patriotic obligation. Though academic in nature, {pronoun_he} found flying exhilarating and threw himself into gunnery and navigation drills. {his_her} brother had died during the campaign in France, and the loss drove {pronoun_him} to take more risks in training. {name} kept a detailed journal of every flight exercise, noting both failures and improvements.</String>
+
+		<!--Italian Backgrounds-->
+		<String key="Regia_PilotBackground0">{name} was born in a coastal town near Bari, where {pronoun_he} spent childhood watching seaplanes take off from the harbor. {pronoun_he} joined a local flying club in {his_her} teens and earned glider hours before military service. The Regia Aeronautica’s bold operations in Spain inspired {name} to pursue a career in aviation. {pronoun_he} trained as a reconnaissance pilot and showed an early aptitude for navigation over open terrain. After an older brother was wounded in North Africa, {name} pushed for front-line service.</String>
+		<String key="Regia_PilotBackground1">The {son_or_daughter} of a railway engineer from Bologna, {name} was studying mathematics when war broke out. {pronoun_he} enlisted in the Regia Aeronautica hoping to apply {his_her} technical skills in the service of Italy. Though not originally drawn to combat, {pronoun_he} proved to be a disciplined and precise aviator in training. {his_her} instructors noted {his_her} calm under pressure during emergency drills. Reports of British bombings in Sicily made the war feel closer to home, deepening {his_her} sense of duty.</String>
+		<String key="Regia_PilotBackground2">{name} came from a family of fishermen on the Ligurian coast and had little contact with aviation before the war. After completing compulsory military service, {pronoun_he} was offered a spot in a basic air training program due to strong reflex tests. Flying quickly became a passion, and {pronoun_he} volunteered for operations over the Mediterranean. When {his_her} hometown was shelled by naval fire in 1941, {name} became determined to serve wherever {pronoun_he} was needed most. {pronoun_he} carries a charm carved from driftwood, gifted by {his_her} mother.</String>
+		<String key="Regia_PilotBackground3">{name} was raised in Naples by a family active in Fascist youth organizations. {pronoun_he} entered pilot training through a military-preparatory program and excelled in both theory and flight skills. {pronoun_he} viewed flying as a way to bring honor to the homeland and prove personal worth. During training, {pronoun_he} narrowly avoided a fatal crash, which hardened {his_her} resolve. With friends already deployed to the Eastern Front, {name} began pushing for combat assignment beyond Italy’s borders.</String>
+		<String key="Regia_PilotBackground4">Born in Verona, {name} grew up under the shadow of the Great War, listening to stories told by {his_her} grandfather, a decorated Alpini. {pronoun_he} originally aimed to join the army, but a visiting Air Force officer persuaded {pronoun_him} to take the aviation exams. After a slow start, {pronoun_he} found a niche flying tactical bombers and enjoyed the team-oriented environment. When a close friend was killed during a mission over Malta, {name} redoubled {his_her} efforts in training. A faded photograph of the two remains tucked inside {his_her} flight suit.</String>
+
+		<!--Free French Backgrounds-->
+		<String key="Normandie_PilotBackground0">{name} grew up in Lyon, the {son_or_daughter} of a tram conductor who had fought in the Great War. When France fell in 1940, {pronoun_he} fled south, eventually joining the Free French forces. {pronoun_he} had trained as a glider instructor before the war and adapted quickly to Soviet aircraft. The chance to take the fight back to the Germans gave {pronoun_him} a renewed sense of purpose. Letters from {his_her} family in occupied France were rare, but each one strengthened {his_her} resolve to keep flying.</String>
+		<String key="Normandie_PilotBackground1">A mechanic by trade, {name} was working at an airfield near Marseille when German forces arrived. {pronoun_he} sabotaged several fuel trucks before escaping into the countryside. After months with the Resistance, {pronoun_he} managed to reach Algiers and enlist with the Free French air forces. Assigned to the Normandie group, {pronoun_he} was eager to learn Russian machines and tactics. The snow and endless horizon were unlike anything {pronoun_he} had known, but {pronoun_he} saw every flight as a blow struck for France.</String>
+		<String key="Normandie_PilotBackground2">The child of schoolteachers in Tours, {name} dreamed of flying since {pronoun_he} first saw a biplane at a village fair. When the war began, {pronoun_he} enlisted immediately, but the armistice scattered {his_her} unit. After a dangerous journey through Spain, {pronoun_he} joined the Free French in London, then volunteered for the Eastern Front. Though unfamiliar with Soviet customs, {name} quickly gained respect for {his_her} VVS counterparts. Each enemy {pronoun_he} faced in the air was a reminder of what was taken from {his_her} homeland.</String>
+		<String key="Normandie_PilotBackground3">Before the war, {name} was a mail pilot flying short-haul routes between French colonies in North Africa. After the German occupation, {pronoun_he} refused to collaborate and lost {his_her} post. Desperate to continue the fight, {pronoun_he} volunteered for service in the USSR after hearing of the Normandie group. Accustomed to hot, arid climates, the Russian winter was a shock. Still, {pronoun_he} embraced the mission, finding camaraderie among the Soviet ground crews and a shared hatred of the occupiers.</String>
+		<String key="Normandie_PilotBackground4">Born in Paris to a working-class family, {name} had just begun flight school when France surrendered. {pronoun_he} escaped via boat to North Africa, determined to keep flying under the Cross of Lorraine. After a brief stint escorting convoys, {pronoun_he} was offered a place in the Normandie squadron. {his_her} instructors noted {his_her} aggressive style and knack for close formation flying. A photograph of {his_her} mother and younger sister, left behind in the occupied zone, was tucked into the corner of the cockpit glass.</String>
+		
+		<!--Services-->
+		<String key="AirService_VVS">Voyenno-Vozdushnye Sily (VVS)</String>
+		<String key="AirService_Luftwaffe">Luftwaffe</String>
+		<String key="AirService_Normandie">Normandie-Niemen</String>
+		<String key="AirService_Regia">Regia Aeronautica</String>
+		
+		<!-- Ranks -->
+		<!-- VVS -->
+		<String key="VVS_szt">Serzhant</String>
+		<String key="VVS_szt_abbrev">Szt.</String>
+		<String key="VVS_ssrzh">Starshy Serzhant</String>
+		<String key="VVS_ssrzh_abbrev">SSzt.</String>
+		<String key="VVS_mlt">Mládshiy Leytenant</String>
+		<String key="VVS_mlt_abbrev">Mlt.</String>
+		<String key="VVS_lt">Leytenant</String>
+		<String key="VVS_lt_abbrev">Lt.</String>
+		<String key="VVS_slt">Starshiy Leytenant</String>
+		<String key="VVS_slt_abbrev">SLt.</String>
+		<String key="VVS_capt">Kapitan</String>
+		<String key="VVS_capt_abbrev">Kapt.</String>
+		<String key="VVS_maj">Mayor</String>
+		<String key="VVS_maj_abbrev">Maj.</String>
+
+		<!-- Normandie -->
+		<String key="Normandie_slt">Sous-lieutenant</String>
+		<String key="Normandie_slt_abbrev">Slt.</String>
+		<String key="Normandie_lt">Lieutenant</String>
+		<String key="Normandie_lt_abbrev">Lt.</String>
+		<String key="Normandie_cne">Capitaine</String>
+		<String key="Normandie_cne_abbrev">Cne.</String>
+		<String key="Normandie_Cmdt">Commandant</String>
+		<String key="Normandie_Cmdt_abbrev">Cmdt.</String>
+		<String key="Normandie_ltcol">Lieutenant-colonel</String>
+		<String key="Normandie_ltcol_abbrev">Lt.Col.</String>
+
+		<!-- Luftwaffe -->
+		<String key="Luft_uftz">Unterfeldwebel</String>
+		<String key="Luft_uftz_abbrev">Uffz.</String>
+		<String key="Luft_fw">Feldwebel</String>
+		<String key="Luft_fw_abbrev">Fw.</String>
+		<String key="Luft_ofw">Oberfeldwebel</String>
+		<String key="Luft_ofw_abbrev">Ofw.</String>
+		<String key="Luft_lt">Leutnant</String>
+		<String key="Luft_lt_abbrev">Lt.</String>
+		<String key="Luft_olt">Oberleutnant</String>
+		<String key="Luft_olt_abbrev">OLt.</String>
+		<String key="Luft_hptm">Hauptmann</String>
+		<String key="Luft_hptm_abbrev">Hptm.</String>
+		<String key="Luft_maj">Major</String>
+		<String key="Luft_maj_abbrev">Maj.</String>
+
+		<!-- Regia Aeronautica -->
+		<String key="Regia_sgt">Sergente</String>
+		<String key="Regia_sgt_abbrev">Sgt.</String>
+		<String key="Regia_smagg">Sergente Maggiore</String>
+		<String key="Regia_smagg_abbrev">S.Magg.</String>
+		<String key="Regia_m">Maresciallo</String>
+		<String key="Regia_m_abbrev">M.</String>
+		<String key="Regia_sten">Sottotenente</String>
+		<String key="Regia_sten_abbrev">S.Ten.</String>
+		<String key="Regia_ten">Tenente</String>
+		<String key="Regia_ten_abbrev">Ten.</String>
+		<String key="Regia_cap">Capitano</String>
+		<String key="Regia_cap_abbrev">Cap.</String>
+		<String key="Regia_magg">Maggiore</String>
+		<String key="Regia_magg_abbrev">Magg.</String>
+		
+		<Plural key="MissionsCompleted">
+			<One>You have completed 1 mission.</One>
+			<Other>You have completed {count} missions.</Other>
+		</Plural>
+	</Language>
+
+	<Language code="de">
+		<String key="Title">Crosswind - IL-2 Dynamischer Kampagnen-Generator</String>
+		<String key="NewCampaign">Neue Kampagne</String>
+		<String key="LoadCampaign">Kampagne Laden</String>
+		<String key="Settings">Einstellungen</String>
+		<String key="Exit">Beenden</String>
+
+		<String key="Button_Next">Weiter</String>
+		<String key="Button_Back">Zurück</String>
+		<String key="Button_Cancel">Abbrechen</String>
+
+		<String key="Warning_NameTooShort">Der Name muss mindestens %d Zeichen lang sein.</String>
+		<String key="Warning_NameExists">Eine Kampagne mit diesem Namen existiert bereits.</String>
+
+		<String key="Theater_Stalingrad">Stalingrad</String>
+		<String key="Phase_GermanAdvanceToDon">Deutscher Vormarsch zum Don</String>
+		<String key="Phase_GermanAdvanceOnVolga">Deutscher Vormarsch an die Wolga</String>
+		
+		<String key="NewCampaign_Title">Neue Kampagne Erstellen</String>
+		<String key="NewCampaign_CampaignName">Kampagnenname</String>
+		<String key="NewCampaign_Side">Seite</String>
+		<String key="NewCampaign_Side_Allies">Alliierte</String>
+		<String key="NewCampaign_Side_Axis">Achsenmächte</String>
+		<String key="NewCampaign_Theater">Schauplatz</String>
+		<String key="NewCampaign_StartingPhase">Startphase</String>
+		<String key="NewCampaign_StartingDate">Startdatum</String>
+		<String key="NewCampaign_Description">Beschreibung</String>
+		<String key="NewCampaign_AirService">Luftwaffe</String>
+		<String key="AirService_VVS">Voyenno-Vozdushnye Sily (VVS)</String>
+		<String key="AirService_Luftwaffe">Luftwaffe</String>
+		<String key="AirService_Normandie">Normandie</String>
+		<String key="AirService_Regia">Regia Aeronautica</String>
+
+
+		<Plural key="MissionsCompleted">
+			<One>Sie haben 1 Mission abgeschlossen.</One>
+			<Other>Sie haben {count} Missionen abgeschlossen.</Other>
+		</Plural>
+	</Language>
+
+	<Language code="ru">
+		<String key="Title">Crosswind Генератор динамической кампании IL-2</String>
+		<String key="NewCampaign">Новая кампания</String>
+		<String key="LoadCampaign">Загрузить кампанию</String>
+		<String key="Settings">Настройки</String>
+		<String key="Exit">Выход</String>
+
+		<String key="Button_Next">Далее</String>
+		<String key="Button_Back">Назад</String>
+		<String key="Button_Cancel">Отмена</String>
+
+		<String key="Warning_NameTooShort">Имя должно содержать не менее %d символов.</String>
+		<String key="Warning_NameExists">Кампания с таким именем уже существует.</String>
+
+		<!-- Theater -->
+		<String key="Theater_Stalingrad">Сталинград</String>
+
+		<!-- Phases -->
+		<String key="Phase_GermanAdvanceToDon">Немецкое наступление к Дону</String>
+		<String key="Phase_GermanAdvanceOnVolga">Немецкое наступление на Волгу</String>
+		
+		<String key="NewCampaign_Title">Создание новой кампании</String>
+		<String key="NewCampaign_CampaignName">Название кампании</String>
+		<String key="NewCampaign_Side">Сторона</String>
+		<String key="NewCampaign_Side_Allies">Союзники</String>
+		<String key="NewCampaign_Side_Axis">Ось</String>
+		<String key="NewCampaign_Theater">Театр боевых действий</String>
+		<String key="NewCampaign_StartingPhase">Начальная фаза</String>
+		<String key="NewCampaign_StartingDate">Дата начала</String>
+		<String key="NewCampaign_Description">Описание</String>
+		<String key="NewCampaign_AirService">Авиационная служба</String>
+		<String key="AirService_VVS">Военно-воздушные силы (ВВС)</String>
+		<String key="AirService_Luftwaffe">Люфтваффе</String>
+		<String key="AirService_Normandie">Нормандия</String>
+		<String key="AirService_Regia">Регия Аэронавтика</String>
+
+		<Plural key="MissionsCompleted">
+			<One>Вы выполнили 1 задание.</One>
+			<Other>Вы выполнили {count} заданий.</Other>
+		</Plural>
+	</Language>
+</Localization>
