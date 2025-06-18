@@ -149,12 +149,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Campaign\CampaignManager.cpp" />
+    <ClCompile Include="src\Campaign\Mission\MissionPlanGenerator.cpp" />
     <ClCompile Include="src\Campaign\NewPilot.cpp" />
     <ClCompile Include="src\Core.cpp" />
     <ClCompile Include="src\Core\Airfields.cpp" />
     <ClCompile Include="src\Core\CrosswindApp.cpp" />
     <ClCompile Include="src\Core\EnumHelpers.cpp" />
     <ClCompile Include="src\UI\CampaignLayer.cpp" />
+    <ClCompile Include="src\UI\CampaignMenu\PlayerPilotsWindow.cpp" />
+    <ClCompile Include="src\UI\CampaignMenu\SquadronInfoWindow.cpp" />
+    <ClCompile Include="src\UI\CampaignMenu\SquadronMissionsWindow.cpp" />
     <ClCompile Include="src\UI\CrosswindUI.cpp" />
     <ClCompile Include="src\Core\TextureGarbageCollector.cpp" />
     <ClCompile Include="src\Core\Theater.cpp" />
@@ -171,9 +175,13 @@
     <ClCompile Include="src\UI\MainMenu\SquadronSelectionWindow.cpp" />
     <ClCompile Include="src\UI\WalnutApp.cpp" />
     <ClCompile Include="src\UI\Windows\CreateNewPilotWindow.cpp" />
+    <ClCompile Include="src\UI\Windows\MissionBriefingWindow.cpp" />
+    <ClCompile Include="src\UI\Windows\NewsPopup.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Campaign\CampaignManager.h" />
+    <ClInclude Include="src\Campaign\Mission\MissionPlanGenerator.h" />
+    <ClInclude Include="src\Campaign\Mission\MissionType.h" />
     <ClInclude Include="src\Campaign\NewPilot.h" />
     <ClInclude Include="src\Config\ConfigManager.h" />
     <ClInclude Include="src\Core.h" />
@@ -181,9 +189,13 @@
     <ClInclude Include="src\Core\Airfields.h" />
     <ClInclude Include="src\Core\CampaignData.h" />
     <ClInclude Include="src\Core\CrosswindApp.h" />
+    <ClInclude Include="src\Core\DateTime.h" />
     <ClInclude Include="src\Core\EnumHelpers.h" />
+    <ClInclude Include="src\date\date.h" />
     <ClInclude Include="src\UI\CampaignLayer.h" />
+    <ClInclude Include="src\UI\CampaignMenu\PlayerPilotsWindow.h" />
     <ClInclude Include="src\UI\CampaignMenu\SquadronInfoWindow.h" />
+    <ClInclude Include="src\UI\CampaignMenu\SquadronMissionsWindow.h" />
     <ClInclude Include="src\UI\CrosswindUI.h" />
     <ClInclude Include="src\Core\TextureGarbageCollector.h" />
     <ClInclude Include="src\Core\Theater.h" />
@@ -200,11 +212,15 @@
     <ClInclude Include="src\UI\MainMenu\MainMenuButtons.h" />
     <ClInclude Include="src\UI\MainMenu\NewCampaignWindow.h" />
     <ClInclude Include="src\UI\MainMenu\SquadronSelectionWindow.h" />
+    <ClInclude Include="src\UI\WindowContexts\CampaignContext.h" />
     <ClInclude Include="src\UI\WindowContexts\CampaignSetupContext.h" />
+    <ClInclude Include="src\UI\WindowContexts\MissionContext.h" />
     <ClInclude Include="src\UI\WindowContexts\NewPilotContext.h" />
     <ClInclude Include="src\UI\WindowContexts\WindowContexts.h" />
     <ClInclude Include="src\UI\Windows\CreateNewPilotWindow.h" />
     <ClInclude Include="src\Core\PilotData.h" />
+    <ClInclude Include="src\UI\Windows\MissionBriefingWindow.h" />
+    <ClInclude Include="src\UI\Windows\NewsPopup.h" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="data\aircraft\Aircraft.xml" />

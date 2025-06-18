@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Core.h"
+#include "Campaign/Mission/MissionType.h"
+#include "Core/AircraftData.h"
 
 enum ESquadronAircraftStatus
 {
@@ -11,6 +13,7 @@ enum ESquadronAircraftStatus
 
 enum EVictoryType
 {
+	VICTORY_NONE,
 	AIRCRAFT_LIGHT,
 	AIRCRAFT_MEDIUM,
 	AIRCRAFT_HEAVY,
@@ -37,7 +40,7 @@ enum EVictoryType
 
 struct PilotVictory
 {
-	EVictoryType type;
+	EVictoryType type = EVictoryType::VICTORY_NONE;
 	std::string itemName = "Unknown";
 	std::string date = "Unknown";
 	std::string location = "Unknown";
@@ -59,16 +62,29 @@ struct Rank {
 	std::string abbrevation;
 	int level = 0;
 	int minScoreReq = 0;
+
+	Rank() = default;
 };
 
 enum EPilotStatus
 {
-	EPILOT_READY,
-	EPILOT_ONLEAVE,
-	EPILOT_WOUNDED,
-	EPILOT_CAPTURED,
-	EPILOT_DEAD,
+	EPILOT_NONE = 0,
+	EPILOT_READY = 1 << 0,
+	EPILOT_ONLEAVE = 1 << 1,
+	EPILOT_WOUNDED = 1 << 2,
+	EPILOT_CAPTURED = 1 << 3,
+	EPILOT_DEAD = 1 << 4,
 };
+
+inline EPilotStatus operator|(EPilotStatus a, EPilotStatus b)
+{
+	return static_cast<EPilotStatus>(static_cast<int>(a) | static_cast<int>(b));
+}
+
+inline bool HasStatus(EPilotStatus flags, EPilotStatus test)
+{
+	return (static_cast<int>(flags) & static_cast<int>(test)) != 0;
+}
 
 struct PilotData
 {
@@ -93,6 +109,23 @@ struct PilotData
 	int woundDuration = 0;
 
 	std::vector<PilotVictory> Victories;
+	float tempCombatScore = 0;
+
+	PilotData() = default;
+};
+
+struct SquadronMissionType
+{
+	EMissionType missionType;
+	float missionChance = 0.f;
+};
+
+struct SquadronMission
+{
+	MissionPlan missionPlan;
+	std::vector<PilotData> AssignedPilots;
+	std::vector<SquadronAircraft> assignedAircraft;
+	bool missionComplete = false;
 };
 
 struct Squadron {
@@ -110,8 +143,76 @@ struct Squadron {
 	std::vector<PilotData> Pilots;
 	std::vector<SquadronAircraft> activeAircraft;
 
+	std::vector<std::pair<DateTime,std::vector<SquadronMissionType>>> missionTypes;
+	std::vector<SquadronMission> currentDaysMissions;
+
 	bool bSquadronInitialized = false;
 
 	Squadron() = default;
+public:
+	static SquadronMission* GetCurrentMission(Squadron& playerSquadron)
+	{
+		for (int i = 0; i < playerSquadron.currentDaysMissions.size(); i++)
+		{
+			if (!playerSquadron.currentDaysMissions[i].missionComplete)
+			{
+				return &playerSquadron.currentDaysMissions[i];
+			}
+		}
+		return nullptr;
+	}
+	static const SquadronMission* GetCurrentMission(const Squadron& playerSquadron)
+	{
+		for (int i = 0; i < playerSquadron.currentDaysMissions.size(); i++)
+		{
+			if (!playerSquadron.currentDaysMissions[i].missionComplete)
+			{
+				return &playerSquadron.currentDaysMissions[i];
+			}
+		}
+		return nullptr;
+	}
+
+	const int ReadyPilots()
+	{
+		int count = 0;
+		for (const auto& p : Pilots)
+		{
+			if (p.PilotStatus & EPILOT_READY)
+			{
+				count++;
+			}
+		}
+
+		return count;
+	}
+
+	const int ReadyAircraft()
+	{
+		int count = 0;
+		for (const auto& p : activeAircraft)
+		{
+			if (p.status == EAIRCRAFT_READY)
+			{
+				count++;
+			}
+		}
+
+		return count;
+	}
+
+	PilotData& GetPilotFromNameRank(std::string pilotName, std::string rank)
+	{
+		PilotData defaultData = PilotData();
+		for (int i = 0; i < Pilots.size(); i++)
+		{
+			if (Pilots[i].PilotName == pilotName && Pilots[i].Rank.id == rank)
+			{
+				return Pilots[i];
+			}
+		}
+
+		return defaultData;
+	}
 };
 

@@ -1,6 +1,11 @@
 #pragma once
 
 #include "CrosswindLayer.h"
+#include "UI/CampaignMenu/SquadronInfoWindow.h"
+#include "UI/Windows/MissionBriefingWindow.h"
+#include "UI/Windows/NewsPopup.h"
+#include "UI/WindowContexts/MissionContext.h"
+
 
 class CampaignLayer : public CrosswindLayer
 {
@@ -11,8 +16,27 @@ public:
 
 	void OnUpdate(float DeltaTime) override;
 
-private:
+	void AddNewsItem(NewsItem& item);
 
+	void ShowNewsItems();
+
+	void ClearNewsItems();
+
+private:
+	std::shared_ptr<CampaignContext> m_CampaignContext;
+	std::shared_ptr<MissionContext> m_MissionContext;
+	int m_SelectedPlayerPilotIndex = 0;
+	SquadronMission* m_CurrentMission = nullptr;
 	int m_SelectedTabIndex = 0;
+
+
+	std::unique_ptr<MissionBriefingWindow> m_MissionBriefingWindow;
+
+	NewsPopupWindow newsPopup;
+	std::vector<NewsItem> CurrentNewsItems;
+	int newsItemIndex;
+	bool bShouldShowNews = false;
+
+	bool bShowMissionBriefing = false;
 
 };

@@ -12,6 +12,101 @@
 		<String key="Button_Back">Back</String>
 		<String key="Button_Cancel">Cancel</String>
 		<String key="Button_Load">Load</String>
+
+		<String key="CurrentDate">Current Date:</String>
+		<String key="CurrentTime">Current Time:</String>
+		<String key="Airfield">Airfield:</String>
+
+		<String key="Tab_PlayerPilot">Player Pilot</String>
+		<String key="Tab_Squadron">Squadron</String>
+		<String key="Tab_Missions">Missions</String>
+		<String key="Tab_Headquarters">Headquarters</String>
+
+		<String key="SquadronWindow_ActiveRoster">Active Roster</String>
+		<String key="SquadronWindow_MedicalBay">Medical Bay</String>
+		<String key="SquadronWindow_ActiveAircraft">Active Aircraft</String>
+		<String key="SquadronWindow_GroundedAircraft">Grounded Aircraft</String>
+		<String key="SquadronWindow_LostPilots">Killed or Captured Pilots</String>
+
+		<String key="PilotWindow_PilotStatus">Pilot Status:</String>
+		<String key="Scheduled_Missions">Scheduled Missions:</String>
+		<String key="NoMissions">There are no missions scheduled for today.</String>
+		<String key="NextDay">Next Day</String>
+		<String key="StartMission">Start Mission</String>
+		<String key="CombatReport">Combat Report</String>
+		<String key="FlightPos">Flight Position</String>
+		<String key="FlightLead">Flight Lead</String>
+		<String key="Wingman">Wingman {pos}</String>
+		<String key="MissionDateTime">Mission Start Time:</String>
+		<String key="MissionDescription">Mission Description:</String>
+		<String key="MissionWeather">Weather Report:</String>
+
+		<String key="WeatherAirTemp">Air Temperature:</String>
+		<String key="WeatherAirPressure">Air Pressure:</String>
+		<String key="WeatherCloudCover">Cloud Cover:</String>
+		<String key="WeatherClear">Clear</String>
+		<String key="WeatherLight">Light</String>
+		<String key="WeatherMedium">Medium</String>
+		<String key="WeatherHeavy">Heavy</String>
+		<String key="WeatherOvercast">Overcast</String>
+		<String key="WeatherCloudBase">Cloud Base:</String>
+		<String key="WeatherCloudTop">Cloud Top:</String>
+		<String key="WeatherPrecipitationAmount">Precipitation Amount:</String>
+		<String key="RainNone">None</String>
+		<String key="RainLight">Light</String>
+		<String key="RainMedium">Medium</String>
+		<String key="RainHeavy">Heavy</String>
+		<String key="WeatherWind">Wind Report:</String>
+		<String key="WeatherSeaState">Sea State:</String>
+
+		<String key="MeterAbbr">m</String>
+		<String key="MeterPerSecAbbr">m/s</String>
+		<String key="DirectionFrom">from</String>
+		
+		<String key="MissionReport">Mission Report:</String>
+		<String key="OtherSquadrons">Reports from other Squadrons:</String>
+		
+		<String key="Name">Name</String>
+		<String key="Missions">Missions</String>
+		<String key="Aircraft">Aircraft</String>
+		<String key="Vehicles">Vehicles</String>
+		<String key="Rail">Rail</String>
+		<String key="Weapons">Weapons</String>
+		<String key="Buildings">Buildings</String>
+		<String key="Marine">Marine</String>
+		<String key="DaysUntilRecovered">Days Until Recovered</String>
+		<String key="AircraftType">Type</String>
+		<String key="AircraftCode">Code</String>
+		<String key="AircraftMaintance">Maintenance (days)</String>
+		<String key="Victories">Victories</String>
+		
+		<String key="AIRCRAFT_LIGHT">Light Aircraft</String>
+		<String key="AIRCRAFT_MEDIUM">Medium Aircraft</String>
+		<String key="AIRCRAFT_HEAVY">Heavy Aircraft</String>
+		<String key="AIRCRAFT_PARKED">Parked Aircraft</String>
+
+		<String key="VEHICLE_TRANSPORT">Transport Vehicle</String>
+		<String key="VEHICLE_LIGHTARMOR">Light Armored Vehicle</String>
+		<String key="VEHICLE_MEDIUMARMOR">Medium Armored Vehicle</String>
+		<String key="VEHICLE_HEAVYARMOR">Heavy Armored Vehicle</String>
+
+		<String key="RAIL_LOCOMOTIVE">Locomotive</String>
+		<String key="RAIL_RAILCAR">Railcar</String>
+		<String key="RAIL_STATION">Rail Station</String>
+
+		<String key="WEAPON_MG">Machine Gun</String>
+		<String key="WEAPON_CANNON">Cannon</String>
+		<String key="WEAPON_AAA">Anti-Aircraft Artillery</String>
+		<String key="WEAPON_ROCKETLAUNCHER">Rocket Launcher</String>
+
+		<String key="BUILDING_RESIDENTIAL">Residential Building</String>
+		<String key="BUILDING_FACILITY">Facility</String>
+		<String key="BUILDING_BRIDGE">Bridge</String>
+
+		<String key="MARINE_LIGHT">Light Marine Vessel</String>
+		<String key="MARINE_CARGO">Cargo Ship</String>
+		<String key="MARINE_SUBMARINE">Submarine</String>
+		<String key="MARINE_DESTROYER">Destroyer</String>
 		
 		<String key="pronoun_he_he">he</String>
 		<String key="pronoun_he_she">she</String>
@@ -34,7 +129,7 @@
 		<String key="EPILOT_ONLEAVE">On Leave</String>
 		<String key="EPILOT_WOUNDED">Wounded</String>
 		<String key="EPILOT_CAPTURED">Captured</String>
-		<String key="EPILOT_DEAD">Dead</String>
+		<String key="EPILOT_DEAD">Killed</String>
 		<String key="EAIRCRAFT_READY">Ready</String>
 		<String key="EAIRCRAFT_MAINTANCE">Maintenance</String>
 		<String key="EAIRCRAFT_UPGRADE">Upgrade</String>

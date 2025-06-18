@@ -84,7 +84,7 @@ void CreateNewPilotWindow::RenderContents()
 	std::vector<Rank> ranks = m_CampaignData.FinalSelectedService.Ranks;
 	if (m_PilotData.Rank.id == "") m_PilotData.Rank = ranks[0]; 
 	//Order No.5/1943 - pilots now start as mLt
-	if (Core::HasDatePassed(m_CampaignData.StartDate, "1943-01-6") && m_CampaignData.FinalSelectedService.id == "VVS")
+	if (Core::HasDatePassed(m_CampaignData.StartDate, DateTime::FromStrings("1943-01-6")) && m_CampaignData.FinalSelectedService.id == "VVS")
 	{
 		ranks.erase(
 			std::remove_if(ranks.begin(), ranks.end(),
@@ -285,9 +285,9 @@ void CreateNewPilotWindow::SavePilotData()
 	}
 
 	std::stringstream ss;
-	ss << basePath << "/" << prefix << std::setfill('0') << std::setw(2) << m_SelectedImageIndex << ".jpg";
+	ss << basePath << "/" << prefix << std::setfill('0') << std::setw(2) << (m_SelectedImageIndex + 1) << ".jpg";
 	std::string filePath = ss.str();
-	if (!std::filesystem::exists(filePath))
+	if (std::filesystem::exists(filePath))
 	m_PilotData.IconPath = filePath;
 
 	m_PilotData.Nationality = m_CampaignData.FinalSelectedService.nationality;

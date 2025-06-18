@@ -7,10 +7,13 @@ struct CampaignData
 {
 	std::string CampaignName;
 	
-	std::string CurrentDate;
-	std::string CurrentTime;
+	DateTime CurrentDateTime;
+
+	WeatherInfo CurrentWeather;
 
 	Theater CurrentTheater = Theater();
 
 	std::vector<PilotData> PlayerPilots;
+
+	std::string ExpectedCombatReport;
 };

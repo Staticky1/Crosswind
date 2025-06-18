@@ -33,8 +33,8 @@
 				<Rank id="Luft_ofw" name="Oberfeldwebel" abbreviation="Ofw." level="3" minScoreRequirement="20"/>
 				<Rank id="Luft_lt" name="Leutnant" abbreviation="Lt." level="4" minScoreRequirement="40"/>
 				<Rank id="Luft_olt" name="Oberleutnant" abbreviation="OLt." level="5" minScoreRequirement="60"/>
-				<Rank id="Luft_hptm" name="Hauptmann" abbreviation="Hptm." level="6" minScoreRequirement="120"/>
-				<Rank id="Luft_maj" name="Major" abbreviation="Maj." level="7" minScoreRequirement="180"/>
+				<Rank id="Luft_hptm" name="Hauptmann" abbreviation="Hptm." level="6" minScoreRequirement="100"/>
+				<Rank id="Luft_maj" name="Major" abbreviation="Maj." level="7" minScoreRequirement="150"/>
 			</Ranks>
 		</AirService>
 		<AirService id="Regia" side="Axis" icon="data/images/services/RA.jpg" nationality="Italy" pictures="Italian">
@@ -63,7 +63,13 @@
 				<Update date="1942-08-12" file="frontlines/19420812.xml" />
 				<Update date="1942-08-18" file="frontlines/19420818.xml" />
 			</Frontlines>
-			
+
+			<Battles>
+				<Battle id="kletskaya" startDate ="1942-07-23" startTime="09:00" endDate="1942-07-27" endTime="00:00" x="190281.33" y="0" z="153163.29" radius="10000" />
+				<Battle id="surovikino" startDate ="1942-07-23" startTime="09:00" endDate="1942-07-25" endTime="00:00" x="117660.33" y="0" z="135209.46" radius="8000" />
+				<Battle id="mayorovsky" startDate ="1942-07-23" startTime="09:00" endDate="1942-07-27" endTime="00:00" x="159205.33" y="0" z="145678.58" radius="5000" />
+				<Battle id="germanPocket" startDate ="1942-07-25" startTime="00:00" endDate="1942-07-30" endTime="00:00" x="156884.36" y="0" z="175617.43" radius="8000" />	
+			</Battles>		
 		</Phase>
 		<Phase name="Phase_GermanAdvanceOnVolga">
 			<StartDate>1942-08-23</StartDate>
@@ -72,8 +78,193 @@
 			<Frontlines>
 				<Update date="1942-08-23" file="frontlines/1942_07_21.xml" />
 			</Frontlines>
+			<Battles>
+				
+			</Battles>
 
 		</Phase>
 		<!-- Additional phases can go here -->
 	</Phases>
+
+	<SunriseSunsetTable>
+		<Month number="1">
+			<Sunrise>08:00</Sunrise>
+			<Sunset>16:30</Sunset>
+		</Month>
+		<Month number="2">
+			<Sunrise>07:15</Sunrise>
+			<Sunset>17:15</Sunset>
+		</Month>
+		<Month number="3">
+			<Sunrise>06:15</Sunrise>
+			<Sunset>18:00</Sunset>
+		</Month>
+		<Month number="4">
+			<Sunrise>05:15</Sunrise>
+			<Sunset>19:00</Sunset>
+		</Month>
+		<Month number="5">
+			<Sunrise>04:30</Sunrise>
+			<Sunset>19:45</Sunset>
+		</Month>
+		<Month number="6">
+			<Sunrise>04:15</Sunrise>
+			<Sunset>20:15</Sunset>
+		</Month>
+		<Month number="7">
+			<Sunrise>04:30</Sunrise>
+			<Sunset>20:00</Sunset>
+		</Month>
+		<Month number="8">
+			<Sunrise>05:15</Sunrise>
+			<Sunset>19:15</Sunset>
+		</Month>
+		<Month number="9">
+			<Sunrise>06:00</Sunrise>
+			<Sunset>18:15</Sunset>
+		</Month>
+		<Month number="10">
+			<Sunrise>06:45</Sunrise>
+			<Sunset>17:15</Sunset>
+		</Month>
+		<Month number="11">
+			<Sunrise>07:30</Sunrise>
+			<Sunset>16:30</Sunset>
+		</Month>
+		<Month number="12">
+			<Sunrise>08:00</Sunrise>
+			<Sunset>16:00</Sunset>
+		</Month>
+	</SunriseSunsetTable>
+
+	<ClimateData>
+		<Month number="1">
+			<Season>WINTER</Season>
+			<Temp min="-26" max="-11" />
+			<CloudCover clear="0.5" light="0.3" medium="0.2" heavy="0.2" overcast="0.3" />
+			<Rain chance="0.2" amountLow="0.4" amountMed="0.3" amountHeavy="0.1" />
+			<Wind strengthMax="13" amountLow="0.8" amountMed="0.3" amountHeavy="0.08" />
+			<Haze min="0.1" max="0.9" />
+		</Month>
+		<Month number="2">
+			<Season>WINTER</Season>
+			<Temp min="-15" max="-5" />
+			<CloudCover clear="0.5" light="0.3" medium="0.2" heavy="0.2" overcast="0.3" />
+			<Rain chance="0.2" amountLow="0.4" amountMed="0.3" amountHeavy="0.1" />
+			<Wind strengthMax="12" amountLow="0.8" amountMed="0.3" amountHeavy="0.08" />
+			<Haze min="0.1" max="0.9" />
+		</Month>
+		<Month number="3">
+			<Season>SPRING</Season>
+			<Temp min="-10" max="8" />
+			<CloudCover clear="0.4" light="0.3" medium="0.2" heavy="0.2" overcast="0.1" />
+			<Rain chance="0.3" amountLow="0.4" amountMed="0.3" amountHeavy="0.1" />
+			<Wind strengthMax="15" amountLow="0.8" amountMed="0.3" amountHeavy="0.08" />
+			<Haze min="0.1" max="0.9" />
+		</Month>
+		<Month number="4">
+			<Season>SPRING</Season>
+			<Temp min="8" max="20" />
+			<CloudCover clear="0.4" light="0.3" medium="0.2" heavy="0.2" overcast="0.1" />
+			<Rain chance="0.3" amountLow="0.5" amountMed="0.3" amountHeavy="0.1" />
+			<Wind strengthMax="15" amountLow="0.8" amountMed="0.3" amountHeavy="0.08" />
+			<Haze min="0.1" max="0.9" />
+		</Month>
+		<Month number="5">
+			<Season>SPRING</Season>
+			<Temp min="15" max="26" />
+			<CloudCover clear="0.4" light="0.3" medium="0.2" heavy="0.2" overcast="0.1" />
+			<Rain chance="0.3" amountLow="0.5" amountMed="0.3" amountHeavy="0.1" />
+			<Wind strengthMax="15" amountLow="0.8" amountMed="0.3" amountHeavy="0.08" />
+			<Haze min="0.2" max="0.9" />
+		</Month>
+		<Month number="6">
+			<Season>SUMMER</Season>
+			<Temp min="16" max="30" />
+			<CloudCover clear="0.5" light="0.3" medium="0.2" heavy="0.2" overcast="0.1" />
+			<Rain chance="0.2" amountLow="0.5" amountMed="0.3" amountHeavy="0.1" />
+			<Wind strengthMax="15" amountLow="0.8" amountMed="0.3" amountHeavy="0.08" />
+			<Haze min="0.2" max="1" />
+		</Month>
+		<Month number="7">
+			<Season>SUMMER</Season>
+			<Temp min="28" max="43" />
+			<CloudCover clear="0.6" light="0.3" medium="0.2" heavy="0.2" overcast="0.1" />
+			<Rain chance="0.1" amountLow="0.5" amountMed="0.3" amountHeavy="0.1" />
+			<Wind strengthMax="15" amountLow="0.8" amountMed="0.3" amountHeavy="0.08" />
+			<Haze min="0.2" max="1" />
+		</Month>
+		<Month number="8">
+			<Season>SUMMER</Season>
+			<Temp min="25" max="41" />
+			<CloudCover clear="0.6" light="0.3" medium="0.2" heavy="0.2" overcast="0.1" />
+			<Rain chance="0.1" amountLow="0.5" amountMed="0.3" amountHeavy="0.1" />
+			<Wind strengthMax="15" amountLow="0.8" amountMed="0.3" amountHeavy="0.08" />
+			<Haze min="0.2" max="1" />
+		</Month>
+		<Month number="9">
+			<Season>AUTUMN</Season>
+			<Temp min="24" max="32" />
+			<CloudCover clear="0.5" light="0.3" medium="0.2" heavy="0.2" overcast="0.1" />
+			<Rain chance="0.2" amountLow="0.5" amountMed="0.3" amountHeavy="0.1" />
+			<Wind strengthMax="15" amountLow="0.8" amountMed="0.3" amountHeavy="0.08" />
+			<Haze min="0.3" max="1" />
+		</Month>
+		<Month number="10">
+			<Season>AUTUMN</Season>
+			<Temp min="4" max="18" />
+			<CloudCover clear="0.5" light="0.3" medium="0.2" heavy="0.2" overcast="0.1" />
+			<Rain chance="0.25" amountLow="0.5" amountMed="0.3" amountHeavy="0.1" />
+			<Wind strengthMax="15" amountLow="0.8" amountMed="0.3" amountHeavy="0.08" />
+			<Haze min="0.3" max="1" />
+		</Month>
+		<Month number="11">
+			<Season>WINTER</Season>
+			<Temp min="-18" max="8" />
+			<CloudCover clear="0.4" light="0.3" medium="0.2" heavy="0.2" overcast="0.2" />
+			<Rain chance="0.3" amountLow="0.5" amountMed="0.3" amountHeavy="0.1" />
+			<Wind strengthMax="15" amountLow="0.8" amountMed="0.3" amountHeavy="0.08" />
+			<Haze min="0.4" max="1" />
+		</Month>
+		<Month number="12">
+			<Season>WINTER</Season>
+			<Temp min="-26" max="-8" />
+			<CloudCover clear="0.4" light="0.3" medium="0.2" heavy="0.2" overcast="0.2" />
+			<Rain chance="0.3" amountLow="0.5" amountMed="0.3" amountHeavy="0.1" />
+			<Wind strengthMax="15" amountLow="0.8" amountMed="0.3" amountHeavy="0.08" />
+			<Haze min="0.4" max="1" />
+		</Month>
+	</ClimateData>
+
+	<MapData>
+		<Season name="summer">
+			<HMap>graphics\LANDSCAPE_Stalin_s\height.hini</HMap>
+			<Textures>graphics\LANDSCAPE_Stalin_s\textures.tini</Textures>
+			<Forests>graphics\LANDSCAPE_Stalin_s\trees\woods.wds</Forests>
+			<GuiMap>stalingrad-summer-1942</GuiMap>
+			<SeasonPrefix>su</SeasonPrefix>
+		</Season>
+		<Season name="autumn">
+			<HMap>graphics\LANDSCAPE_Stalin_a\height.hini</HMap>
+			<Textures>graphics\LANDSCAPE_Stalin_a\textures.tini</Textures>
+			<Forests>graphics\LANDSCAPE_Stalin_a\trees\woods.wds</Forests>
+			<GuiMap>stalingrad-autumn-1942</GuiMap>
+			<SeasonPrefix>wi</SeasonPrefix>
+		</Season>
+		<Season name="winter">
+			<HMap>graphics\LANDSCAPE_Stalin_w\height.hini</HMap>
+			<Textures>graphics\LANDSCAPE_Stalin_w\textures.tini</Textures>
+			<Forests>graphics\LANDSCAPE_Stalin_w\trees\woods.wds</Forests>
+			<GuiMap>stalingrad-1942</GuiMap>
+			<SeasonPrefix>wi</SeasonPrefix>
+		</Season>
+		<Season name="spring">
+			<HMap>graphics\LANDSCAPE_Stalin_s\height.hini</HMap>
+			<Textures>graphics\LANDSCAPE_Stalin_s\textures.tini</Textures>
+			<Forests>graphics\LANDSCAPE_Stalin_s\trees\woods.wds</Forests>
+			<GuiMap>stalingrad-summer-1942</GuiMap>
+			<SeasonPrefix>su</SeasonPrefix>
+		</Season>
+	</MapData>
+	
 </Theater>

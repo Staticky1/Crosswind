@@ -102,5 +102,94 @@ namespace Crosswind
 
         return AIRCRAFT_LIGHT; // Default fallback
     }
+  
+    // EMissionType specializations
+    template<>
+    const char* ToString(EMissionType type) {
+        switch (type) {
+        case EMissionType::NONE:           return "NONE";
+        case EMissionType::INTERCEPT:      return "INTERCEPT";
+        case EMissionType::ESCORT:         return "ESCORT";
+        case EMissionType::STRIKE:         return "STRIKE";
+        case EMissionType::HUNT:           return "HUNT";
+        case EMissionType::CAP_HIGH:       return "CAP_HIGH";
+        case EMissionType::CAP_LOW:        return "CAP_LOW";
+        case EMissionType::GROUND_ATTACK:  return "GROUND_ATTACK";
+        case EMissionType::PATROL_GROUND:  return "PATROL_GROUND";
+        case EMissionType::BOMBING:        return "BOMBING";
+        default:                           return "Unknown";
+        }
+    }
+
+    template<>
+    EMissionType FromString<EMissionType>(const std::string& str) {
+        if (str == "NONE")            return EMissionType::NONE;
+        if (str == "INTERCEPT")       return EMissionType::INTERCEPT;
+        if (str == "ESCORT")          return EMissionType::ESCORT;
+        if (str == "STRIKE")          return EMissionType::STRIKE;
+        if (str == "HUNT")            return EMissionType::HUNT;
+        if (str == "CAP_HIGH")        return EMissionType::CAP_HIGH;
+        if (str == "CAP_LOW")         return EMissionType::CAP_LOW;
+        if (str == "GROUND_ATTACK")   return EMissionType::GROUND_ATTACK;
+        if (str == "PATROL_GROUND")   return EMissionType::PATROL_GROUND;
+        if (str == "BOMBING")         return EMissionType::BOMBING;
+        return EMissionType::NONE;
+    }
+
+    bool IsVictoryTypeInCategory(EVictoryType type, const std::string& categoryPrefix)
+    {
+        std::string name = ToString<EVictoryType>(type); // Example: "AIRCRAFT_HEAVY"
+        return name.rfind(categoryPrefix, 0) == 0;   // Check if prefix matches start of string
+    }
+
+    int CountVictoriesByCategory(const PilotData& pilot, const std::string& categoryPrefix)
+    {
+        int count = 0;
+        for (const auto& victory : pilot.Victories)
+        {
+            if (IsVictoryTypeInCategory(victory.type, categoryPrefix))
+                ++count;
+        }
+        return count;
+    }
+
+    std::unordered_map<EVictoryType, int> GetVictoryBreakdown(const PilotData& pilot, const std::string& categoryPrefix, bool includeEmpty)
+    {
+        std::unordered_map<EVictoryType, int> breakdown;
+
+        // First pass: count actual victories
+        for (const auto& victory : pilot.Victories)
+        {
+            if (IsVictoryTypeInCategory(victory.type, categoryPrefix))
+                breakdown[victory.type]++;
+        }
+
+        // Optionally add missing types in this category with count 0
+        if (includeEmpty)
+        {
+            for (int i = AIRCRAFT_LIGHT; i <= MARINE_DESTROYER; ++i)
+            {
+                EVictoryType type = static_cast<EVictoryType>(i);
+                if (IsVictoryTypeInCategory(type, categoryPrefix))
+                {
+                    if (breakdown.find(type) == breakdown.end())
+                        breakdown[type] = 0;
+                }
+            }
+        }
+
+        return breakdown;
+    }
+
+    std::string GetCategoryName(const std::string& prefix)
+    {
+        if (prefix == "AIRCRAFT") return "Aircraft";
+        if (prefix == "VEHICLE") return "Vehicles";
+        if (prefix == "RAIL") return "Rail";
+        if (prefix == "WEAPON") return "Weapons";
+        if (prefix == "BUILDING") return "Buildings";
+        if (prefix == "MARINE") return "Marine";
+        return prefix;
+    }
 
 }

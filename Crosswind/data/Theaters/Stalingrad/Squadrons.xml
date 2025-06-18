@@ -8,9 +8,18 @@
 			<Type date="1942-05-01" name="bf109f4"/>
 		</Aircraft>
 		<Relocations>
-			<Move date="1942-07-21" airfield="Oblivskaya" />
-			<Move date="1942-08-12" airfield="Zryansky" />
+			<Move date="1942-07-21" airfield="Chernishkovskiy" />
+			<Move date="1942-08-12" airfield="Frolov" />
 		</Relocations>
+		<MissionTypes>
+			<Missions date="1942-07-21">
+				<Mission type="CAP_LOW" chance="20"/>
+				<Mission type="CAP_HIGH" chance="15"/>
+				<Mission type="INTERCEPT" chance="30"/>
+				<Mission type="ESCORT" chance="30"/>
+				<Mission type="HUNT" chance="10"/>
+			</Missions>
+		</MissionTypes>
 	</Squadron>
 	
 	<Squadron id="I./StG 77" name="Sturzkampfgeschwader 77" side="Axis" service="Luftwaffe" Experience="1.0">
@@ -20,9 +29,16 @@
 			<Type date="1942-05-01" name="ju87d3"/>
 		</Aircraft>
 		<Relocations>
-			<Move date="1942-07-21" airfield="Oblivskaya" />
-			<Move date="1942-08-18" airfield="Skvorin" />
+			<Move date="1942-07-21" airfield="MorozovskiySouth" />
+			<Move date="1942-08-18" airfield="Oblivskaya" />
 		</Relocations>
+		<MissionTypes>
+			<Missions date="1942-07-21">
+				<Mission type="GROUND_ATTACK" chance="45"/>
+				<Mission type="STRIKE" chance="30"/>
+				<Mission type="PATROL_GROUND" chance="20" />
+			</Missions>
+		</MissionTypes>
 	</Squadron>
 	
 	<Squadron id="22GCT" name="22° Gruppo Caccia Terrestre" side="Axis" service="Regia" Experience="0.8">
@@ -32,9 +48,18 @@
 			<Type date="1942-05-01" name="mc202s8"/>
 		</Aircraft>
 		<Relocations>
-			<Move date="1942-07-21" airfield="Surovikino" />
+			<Move date="1942-07-21" airfield="Chernishkovskiy" />
 			<Move date="1942-08-18" airfield="Skvorin" />
 		</Relocations>
+		<MissionTypes>
+			<Missions date="1942-07-21">
+				<Mission type="CAP_LOW" chance="20"/>
+				<Mission type="CAP_HIGH" chance="15"/>
+				<Mission type="INTERCEPT" chance="30"/>
+				<Mission type="ESCORT" chance="30"/>
+				<Mission type="HUNT" chance="10"/>
+			</Missions>
+		</MissionTypes>
 	</Squadron>
 	
 	<Squadron id="296 IAP" name="296th Fighter Aviation Regiment" side="Allies" service="VVS" Experience="0.4">
@@ -47,6 +72,17 @@
 			<Move date="1942-07-21" airfield="Gromoslavka" />
 			<Move date="1942-08-18" airfield="Beketovka" />
 		</Relocations>
+		<MissionTypes>
+			<Missions date="1942-07-21">
+				<Mission type="CAP_LOW" chance="20"/>
+				<Mission type="CAP_HIGH" chance="5"/>
+				<Mission type="INTERCEPT" chance="30"/>
+				<Mission type="ESCORT" chance="30"/>
+				<Mission type="HUNT" chance="10"/>
+				<Mission type="GROUND_ATTACK" chance="15"/>
+				<Mission type="STRIKE" chance="10"/>
+			</Missions>
+		</MissionTypes>
 	</Squadron>
 	
 	<Squadron id="8 GShAP" name="8th Guards Assault Aviation Regiment" side="Allies" service="VVS" Experience="0.3">
@@ -59,6 +95,13 @@
 			<Move date="1942-07-21" airfield="Grachi" />
 			<Move date="1942-08-09" airfield="Bol.Chapurniki" />
 		</Relocations>
+		<MissionTypes>
+			<Missions date="1942-07-21">
+				<Mission type="GROUND_ATTACK" chance="45"/>
+				<Mission type="STRIKE" chance="30"/>
+				<Mission type="PATROL_GROUND" chance="20" />
+			</Missions>
+		</MissionTypes>
 	</Squadron>
 
 	<Squadron id="GC3" name="Groupe de Chasse 3" side="Allies" service="Normandie" Experience="1.0">
@@ -71,5 +114,14 @@
 			<Move date="1942-07-21" airfield="Golubinskiy" />
 			<Move date="1942-08-18" airfield="Karpovka" />
 		</Relocations>
+		<MissionTypes>
+			<Missions date="1942-07-21">
+				<Mission type="CAP_LOW" chance="20"/>
+				<Mission type="CAP_HIGH" chance="15"/>
+				<Mission type="INTERCEPT" chance="30"/>
+				<Mission type="ESCORT" chance="30"/>
+				<Mission type="HUNT" chance="10"/>
+			</Missions>
+		</MissionTypes>
 	</Squadron>
 </Squadrons>

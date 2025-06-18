@@ -9,7 +9,7 @@ struct CampaignSetupData
 	bool bAxisSelected = false;
 	Theater LoadedTheater;
 
-	std::string StartDate;
+	DateTime StartDate;
 
 	Squadron FinalSelectedSquadron;
 	Service FinalSelectedService;

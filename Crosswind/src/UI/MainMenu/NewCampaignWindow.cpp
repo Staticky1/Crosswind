@@ -6,7 +6,7 @@
 NewCampaignWindow::NewCampaignWindow(std::shared_ptr<WindowContext> context)
 	:CrosswindWindow(LOCAL("NewCampaign_Title"))
 	,m_Context(std::static_pointer_cast<CampaignSetupContext>(context))
-	, m_CampaignData(m_Context->campaignData)
+	,m_CampaignData(m_Context->campaignData)
 {
 
 	m_WindowFlags = ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse;
@@ -158,7 +158,7 @@ void NewCampaignWindow::RenderContents()
 	}
 
 	ImGui::Text(LOCAL("NewCampaign_StartingDate"));
-	ImGui::Text(m_CampaignData.LoadedTheater.phases[m_CampaignData.SelectedPhaseIndex].startDate.c_str());
+	ImGui::Text(m_CampaignData.LoadedTheater.phases[m_CampaignData.SelectedPhaseIndex].startDate.ToDateString().c_str());
 	m_CampaignData.StartDate = m_CampaignData.LoadedTheater.phases[m_CampaignData.SelectedPhaseIndex].startDate;
 	ImGui::Text(LOCAL("NewCampaign_Description"));
 	ImGui::PushTextWrapPos(ImGui::GetContentRegionAvail().x);

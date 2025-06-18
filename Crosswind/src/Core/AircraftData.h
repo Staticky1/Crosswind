@@ -22,13 +22,13 @@ struct AircraftData {
     std::string model;
     std::string desc;
 
-    int cruisingSpeed;
-    int climbOutRate;
-    int goodness;
-    int range;
+    int cruisingSpeed = 0;
+    int climbOutRate = 0;
+    int goodness = 0;
+    int range = 0;
 
-    bool isFlyable;
-    bool isNovice;
+    bool isFlyable = true;
+    bool isNovice = false;
 
     std::string planeSize; // Enum-style string: e.g. "PLANE_SIZE_SMALL"
 

@@ -28,4 +28,6 @@ private:
 
 	bool bHasCreatedSaveData = false;
 	bool bHasLoadedData = false;
+
+
 };
