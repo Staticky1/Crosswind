@@ -13,6 +13,8 @@
 		<String key="Button_Cancel">Cancel</String>
 		<String key="Button_Load">Load</String>
 
+		<String key="LoadingMessage">Please wait while the mission is being generated...</String>
+		
 		<String key="CurrentDate">Current Date:</String>
 		<String key="CurrentTime">Current Time:</String>
 		<String key="Airfield">Airfield:</String>
@@ -40,6 +42,15 @@
 		<String key="MissionDateTime">Mission Start Time:</String>
 		<String key="MissionDescription">Mission Description:</String>
 		<String key="MissionWeather">Weather Report:</String>
+		<String key="MissionPilotsAndAircraft">Pilots and Aircraft</String>
+		<String key="MissionFlightPlan">Flight Plan</String>
+		<String key="FlightPlanGuide">Left click drag to adjust waypoint locations.</String>
+		<String key="FlightPlanGuide2">Right click to edit waypoint speed and altitude.</String>
+		<String key="Button_GenerateMission">Generate Mission</String>
+
+		<String key="MissionCAP01">Take off and follow the waypoints to the partol area.</String>
+		<String key="MissionCAP02">Mission will be considered complete one once patrol area is reached, or if enemy aircraft are engaged.</String>
+		<String key="MissionCAP03">You may be vectored towards enemy aircraft by ground control.</String>
 
 		<String key="WeatherAirTemp">Air Temperature:</String>
 		<String key="WeatherAirPressure">Air Pressure:</String>
@@ -179,7 +190,7 @@
 		<String key="VVS_PilotBackground5">Hailing from a small village near Omsk, {name} had never seen an aircraft up close until enlisting. {Pronoun_he} spent {his_her} early years hunting with {his_her} grandfather and helping maintain farming tools. After reading articles about Soviet aces in Pravda, {pronoun_he} became inspired to serve as a pilot. When German troops approached Stalingrad, several of {his_her} relatives were displaced, which fueled {his_her} desire to act. Though inexperienced, {name} brought determination and a deep connection to the land.</String>
 		<String key="VVS_PilotBackground6">{name} was a student at a trade school in Kharkov, learning metalwork and welding. {Pronoun_he} admired the Soviet pioneers of aviation and often sketched aircraft designs in a small notebook. After German forces occupied Kharkov, {pronoun_he} escaped east with a group of volunteers, narrowly avoiding capture. {Pronoun_he} applied for flight training shortly after and was accepted into a compressed VVS program. {name} sees flying as a skill and a duty, forged equally from loss and ambition.</String>	
 		
-		<!--Luftwaffe Backgrounds-->
+		<!--Luftwaffe (EasternFront) Backgrounds-->
 		<String key="Luftwaffe_PilotBackground0">{name} was born in Leipzig and apprenticed as a mechanic before enlisting. {pronoun_he} developed a fascination with aviation while maintaining motorcycle engines for the Hitler Youth. An uncle, a veteran of the Great War, encouraged {name} to pursue flying rather than serve on the ground. {pronoun_he} excelled in technical instruction and was selected for flight training early. {his_her} hometown was struck during a Soviet bombing raid in 1941, cementing {his_her} belief in the importance of air superiority.</String>
 		<String key="Luftwaffe_PilotBackground1">The {son_or_daughter} of a railway station manager in Königsberg, {name} grew up watching freight trains vanish toward the east. {pronoun_he} volunteered for the Luftwaffe shortly after finishing school, seeking adventure and to serve the Reich from above. {pronoun_he} had no formal aviation experience but scored highly in spatial recognition and mathematics. During training, {pronoun_he} developed a reputation for precise formation flying. A friend from {his_her} training unit was killed in a crash, which left a lasting impression on {name}.</String>
 		<String key="Luftwaffe_PilotBackground2">{name} was raised in a household loyal to the Party, with a father active in local administration and a mother who taught biology. {pronoun_he} attended a National Political Institute of Education, where flight aptitude was recognized early. {pronoun_he} logged glider hours as part of the school’s curriculum and joined the Luftwaffe as soon as age permitted. The invasion of the Soviet Union seemed to {pronoun_him} a chance to prove discipline and devotion in battle. Letters from the front written by older classmates inspired {his_her} ambitions.</String>

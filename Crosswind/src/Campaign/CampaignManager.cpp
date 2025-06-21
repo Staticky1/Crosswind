@@ -10,6 +10,7 @@
 #include "Core/Theater.h"
 #include "UI/CampaignLayer.h"
 #include "Core/Theater.h"
+#include "Campaign/Mission/Generation/MissionFileWriter.h"
 
 CampaignManager& CampaignManager::Instance()
 {
@@ -147,6 +148,18 @@ bool CampaignManager::SaveCampaignData(CampaignData& campaignData, int selectedP
             missionLocationElm->SetAttribute("z", m.missionPlan.missionArea.worldPosition.z);
             missionTargetElm->InsertEndChild(missionLocationElm);
             missionPlanElm->InsertEndChild(missionTargetElm);
+            auto* missionWaypointsElm = doc.NewElement("Waypoints");
+            for (const auto& w : m.missionPlan.missionWaypoints)
+            {
+                auto* missionWaypointElm = doc.NewElement("Waypoint");
+                missionWaypointElm->SetAttribute("name", w.name.c_str());
+                missionWaypointElm->SetAttribute("x", w.WorldLocation.x);
+                missionWaypointElm->SetAttribute("y", w.WorldLocation.y);
+                missionWaypointElm->SetAttribute("z", w.WorldLocation.z);
+                missionWaypointElm->SetAttribute("canEdit", w.canBeEdited);
+                missionWaypointsElm->InsertEndChild(missionWaypointElm);
+            }
+            missionPlanElm->InsertEndChild(missionWaypointsElm);
 
             missionElm->InsertEndChild(missionPlanElm);
 
@@ -421,6 +434,19 @@ int CampaignManager::GenerateAircraftDamage(EEncounterResult resultType)
         return Core::GetRandomInt(m_ModerateMaintanceMaxDays, m_MajorMaintanceMaxDays);
     }
     return 0;
+}
+
+void CampaignManager::GenerateMissionFile(CampaignData& inCampaignData, int& SelectedPlayerPilot, SquadronMission& inMission)
+{
+    MissionFileWriter missionWriter = MissionFileWriter(inCampaignData, SelectedPlayerPilot, inMission);
+
+    for (const auto& temp : inCampaignData.CurrentTheater.missionTemplates)
+    {
+        missionWriter.ParseStaticObjectXml(inCampaignData.CurrentTheater.path + temp);
+    }
+    missionWriter.AddAirfields(inCampaignData.CurrentTheater.GetAirfields(inCampaignData.CurrentDateTime));
+
+    missionWriter.WriteMissionFile();
 }
 
 std::string CampaignManager::BuildCampaignSavePath(const std::string& campaignName) const
@@ -977,7 +1003,21 @@ bool CampaignManager::LoadCampaignSave(const std::string& xmlFilePath, std::vect
                 squad.Pilots.push_back(pilot);
             }
         }
+        // -- Aircraft --
+        XMLElement* aircraftsElem = squadElem->FirstChildElement("Aircrafts");
+        if (aircraftsElem) {
+            for (XMLElement* acElem = aircraftsElem->FirstChildElement("Aircraft"); acElem; acElem = acElem->NextSiblingElement("Aircraft")) {
+                SquadronAircraft aircraft;
+                aircraft.type = acElem->Attribute("type");
+                aircraft.code = acElem->Attribute("marking");
+                aircraft.skin = acElem->Attribute("skin");
+                aircraft.status = Crosswind::FromString<ESquadronAircraftStatus>(acElem->Attribute("status"));
+                aircraft.maintanceDuration = acElem->IntAttribute("maintanceDuration");
 
+                // Skipping modifications for now (could be populated later if needed)
+                squad.activeAircraft.push_back(aircraft);
+            }
+        }
         // -- Missions --
         XMLElement* missionsElem = squadElem->FirstChildElement("Missions");
         if (missionsElem) {
@@ -1000,6 +1040,20 @@ bool CampaignManager::LoadCampaignSave(const std::string& xmlFilePath, std::vect
                 missionPosElem->QueryFloatAttribute("x", &newMission.missionPlan.missionArea.worldPosition.x);
                 missionPosElem->QueryFloatAttribute("y", &newMission.missionPlan.missionArea.worldPosition.y);
                 missionPosElem->QueryFloatAttribute("z", &newMission.missionPlan.missionArea.worldPosition.z);
+                
+
+                XMLElement* missionWaypointsElem = missionPlanElem->FirstChildElement("Waypoints");
+                for (XMLElement* waypointElem = missionWaypointsElem->FirstChildElement("Waypoint"); waypointElem; waypointElem = waypointElem->NextSiblingElement("Waypoint"))
+                {
+                    MissionWaypoint newWaypoint;
+                    newWaypoint.name = waypointElem->Attribute("name");
+                    waypointElem->QueryFloatAttribute("x", &newWaypoint.WorldLocation.x);
+                    waypointElem->QueryFloatAttribute("y", &newWaypoint.WorldLocation.y);
+                    waypointElem->QueryFloatAttribute("z", &newWaypoint.WorldLocation.z);
+                    waypointElem->QueryBoolAttribute("canEdit", &newWaypoint.canBeEdited);
+
+                    newMission.missionPlan.missionWaypoints.push_back(newWaypoint);
+                }
 
                 XMLElement* assignedPilotsElem = missionElem->FirstChildElement("AssignedPilots");
                 //mission pilots
@@ -1034,21 +1088,7 @@ bool CampaignManager::LoadCampaignSave(const std::string& xmlFilePath, std::vect
                 squad.currentDaysMissions.push_back(newMission);
             }
         }
-        // -- Aircraft --
-        XMLElement* aircraftsElem = squadElem->FirstChildElement("Aircrafts");
-        if (aircraftsElem) {
-            for (XMLElement* acElem = aircraftsElem->FirstChildElement("Aircraft"); acElem; acElem = acElem->NextSiblingElement("Aircraft")) {
-                SquadronAircraft aircraft;
-                aircraft.type = acElem->Attribute("type");
-                aircraft.code = acElem->Attribute("marking");
-                aircraft.skin = acElem->Attribute("skin");
-                aircraft.status = Crosswind::FromString<ESquadronAircraftStatus>(acElem->Attribute("status"));
-                aircraft.maintanceDuration = acElem->IntAttribute("maintanceDuration");
 
-                // Skipping modifications for now (could be populated later if needed)
-                squad.activeAircraft.push_back(aircraft);
-            }
-        }
 
         outSquadrons.push_back(squad);
     }
@@ -1098,7 +1138,7 @@ void CampaignManager::SimulateMission(DateTime& missionDate, Theater* theater, S
     {
         if (squad.id != playerSquadron.id && (squad.ReadyPilots() > 2 && squad.ReadyAircraft() > 2))
         {
-            MissionPlan newMissionPlan = missionGenerator.CreateMissionPlan(theater, squad, missionDate);
+            MissionPlan newMissionPlan = missionGenerator.CreateMissionPlan(theater, squad, missionDate, Core::Instance().GetApp()->GetCampaignData().CurrentWeather);
             if (Core::GetShortestDistance(newMissionPlan.missionArea.worldPosition, missionLocation) <= 60000)
             {
                 std::pair<Squadron, MissionPlan> selection = { squad,newMissionPlan };
@@ -1198,7 +1238,7 @@ std::vector<Squadron> CampaignManager::GetNearbySquadrons(const DateTime& curren
             [](const ValueStartDate& e) { return e.startDate; }
         );
 
-        const Airfield& squadronAirfield = theater->GetAirfields()->LoadedAirfields.at(AirfieldValue->value);
+        const Airfield& squadronAirfield = theater->GetAirfields(currentTime)->LoadedAirfields.at(AirfieldValue->value);
         
         float distance = Core::GetShortestDistance(worldLocation, squadronAirfield.position);
         const auto* AircraftValue = Core::GetActiveEntryRef<ValueStartDate>(
@@ -1272,9 +1312,12 @@ void CampaignManager::StartNewDay(DateTime newDate, Theater* theater, Squadron& 
             return;
         }
 
+        WeatherInfo newWeatherInfo = theater->GenerateWeather(newDate);
+        Core::Instance().GetApp()->GetCampaignData().CurrentWeather = newWeatherInfo;
+
         DateTime newTime = DateTime::FromStrings(newDate.ToDateString(), selectedTimes[i]);
         int numberOfPilots = Core::GetWeightedRandomIntFromRange(3, std::min<int>({ 9, numberOfAvaPilots, numberOfAvaAircraft }), 0.2, 1, 0.2);
-        MissionPlan newPlan = missionGenerator.CreateMissionPlan(theater, squadron, newTime);
+        MissionPlan newPlan = missionGenerator.CreateMissionPlan(theater, squadron, newTime, Core::Instance().GetApp()->GetCampaignData().CurrentWeather);
         newSquadMission.missionPlan = newPlan;
         MissionRequirements newReq;
         newReq.numberToSelect = numberOfPilots;
@@ -1297,8 +1340,7 @@ void CampaignManager::StartNewDay(DateTime newDate, Theater* theater, Squadron& 
     
     squadron.currentDaysMissions = missionPlans; 
 
-    WeatherInfo newWeatherInfo = theater->GenerateWeather(newDate);
-    Core::Instance().GetApp()->GetCampaignData().CurrentWeather = newWeatherInfo;
+
     //update date and time to the start of the next mission
     Core::Instance().GetApp()->GetCampaignData().CurrentDateTime = Squadron::GetCurrentMission(squadron)->missionPlan.missionDate;
     //add new day news
@@ -1309,7 +1351,7 @@ void CampaignManager::StartNewDay(DateTime newDate, Theater* theater, Squadron& 
         NewsItem newDayNews;
         newDayNews.newsHeading = "A New Day Has Started";
         std::string NewsString = newDate.ToDateString() + " -- Check for new mission assignments \n";
-        newDayNews.newsText = NewsString + "Weather Report: " + newWeatherInfo.GetWeatherReport();
+        newDayNews.newsText = NewsString + "Weather Report: " + Core::Instance().GetApp()->GetCampaignData().CurrentWeather.GetWeatherReport();
         newDayNews.newsImagePath = "data/images/news/NewDay01.jpeg";
         CampaignLayerPtr->ClearNewsItems();
         CampaignLayerPtr->AddNewsItem(newDayNews);

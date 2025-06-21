@@ -43,10 +43,10 @@ void CampaignLayer::OnUIRender()
             Core::Instance().GetApp()->GetCampaignData().CurrentDateTime,
             [](const ValueStartDate& e) { return e.startDate; }
         );
-        if (Core::Instance().GetApp()->GetCampaignData().CurrentTheater.TheaterAirfields.LoadedAirfields.size() == 0)
-            Core::Instance().GetApp()->GetCampaignData().CurrentTheater.LoadAirfields();
+        if (Core::Instance().GetApp()->GetCampaignData().CurrentTheater.GetAirfields(Core::Instance().GetApp()->GetCampaignData().CurrentDateTime)->LoadedAirfields.size() == 0)
+            Core::Instance().GetApp()->GetCampaignData().CurrentTheater.LoadAirfields(Core::Instance().GetApp()->GetCampaignData().CurrentDateTime);
 
-        Airfield CurrentAirfield = Core::Instance().GetApp()->GetCampaignData().CurrentTheater.TheaterAirfields.LoadedAirfields.at(AirfieldValue->value);
+        Airfield CurrentAirfield = Core::Instance().GetApp()->GetCampaignData().CurrentTheater.GetAirfields(Core::Instance().GetApp()->GetCampaignData().CurrentDateTime)->LoadedAirfields.at(AirfieldValue->value);
 
         ImGui::Text(CurrentAirfield.name.c_str());
         ImGui::SameLine();
@@ -92,6 +92,9 @@ void CampaignLayer::OnUIRender()
             m_MissionBriefingWindow->OnRender();
         }
     }
+
+    DrawLoadingPopup();
+
 }
 
 void CampaignLayer::OnAttach()
@@ -148,6 +151,7 @@ void CampaignLayer::OnUpdate(float DeltaTime)
             if (squadronMisionWindow)
             {
                 bShowMissionBriefing = true;
+                squadronMisionWindow->ResetRequestedAction();
             }
             break;
         case EWindowActions::BACK:
@@ -161,11 +165,27 @@ void CampaignLayer::OnUpdate(float DeltaTime)
         }
     }
 
+    if (m_MissionBriefingWindow && m_MissionBriefingWindow->GetRequestedAction() == EWindowActions::CLOSE)
+    {
+        bShowMissionBriefing = false;
+        m_MissionBriefingWindow.reset();
+    }
+
     if (bShowMissionBriefing)
     {
         if (m_MissionBriefingWindow)
         {
             m_MissionBriefingWindow->OnUpdate(DeltaTime);
+            if (m_MissionBriefingWindow->GetRequestedAction() == EWindowActions::NEXT)
+            {
+                //Generate Mission File!
+                StartMissionBuildCommandASync();
+                
+                bShowMissionBriefing = false;
+                m_MissionBriefingWindow.reset();
+
+                
+            }
         }
         else
         {
@@ -195,4 +215,46 @@ void CampaignLayer::ClearNewsItems()
     bShouldShowNews = false;
     CurrentNewsItems.clear();
     newsPopup.ClearNewsItems();
+}
+
+void CampaignLayer::StartMissionBuildCommandASync()
+{
+    bShowMissionGenerationLoading = true;
+    isRunningCommand = true;
+
+    commandFuture = std::async(std::launch::async, [&]() {
+        CampaignManager::Instance().GenerateMissionFile(Core::Instance().GetApp()->GetCampaignData(), m_SelectedPlayerPilotIndex, *m_CurrentMission);
+        isRunningCommand = false;
+        });
+}
+
+void CampaignLayer::DrawLoadingPopup()
+{
+    if (bShowMissionGenerationLoading)
+    {
+        ImGui::OpenPopup("Processing...");
+        bShowMissionGenerationLoading = false; // Only trigger opening once
+    }
+
+    if (ImGui::BeginPopupModal("Processing...", nullptr, ImGuiWindowFlags_AlwaysAutoResize))
+    {
+        // Center on screen
+        ImVec2 center = ImGui::GetMainViewport()->GetCenter();
+        ImGui::SetNextWindowPos(center, ImGuiCond_Always, ImVec2(0.5f, 0.5f));
+
+        //ImGui::SetCursorPosX((ImGui::GetContentRegionAvail().x - ImGui::CalcTextSize(LOCAL("LoadingMessage")).x) * 0.5f);
+        ImGui::Text(LOCAL("LoadingMessage"));
+        ImGui::Separator();
+
+        ImGui::SetCursorPosX((ImGui::GetContentRegionAvail().x - 32) * 0.5f);
+        ImSpinner::SpinnerLemniscate("##SpinnerIncDots",
+            32, 10, ImSpinner::white,2.5f);
+
+        if (!isRunningCommand)
+        {
+            ImGui::CloseCurrentPopup();
+        }
+
+        ImGui::EndPopup();
+    }
 }

@@ -38,6 +38,7 @@ struct Service {
 	std::string side;
 	std::string nationality;
 	std::string picture;
+	int country = 0;
 
 	std::vector<Rank> Ranks;
 
@@ -197,11 +198,11 @@ public:
 
 	Rank GetRankFromID(std::string InputId);
 
-	void LoadAirfields();
+	void LoadAirfields(DateTime time);
 
 	void LoadFrontLines(DateTime date);
 
-	const Airfields* GetAirfields();
+	const Airfields* GetAirfields(DateTime time);
 
 	const Phase& GetCurrentPhase(DateTime currentTime);
 
@@ -217,14 +218,14 @@ public:
 	std::string MapTexturePath;
 	std::vector<Service> Services;
 	std::string path;
-
+	std::vector<std::string> missionTemplates;
 	std::vector<Frontlines> LoadedFrontlines;
 
 	std::vector<Squadron> AllSquadrons;
 
 	int theaterIndex;
 
-	Airfields TheaterAirfields;
+
 
 	std::vector<MapLocation>& GetMapLocations();
 
@@ -257,4 +258,7 @@ private:
 
 	std::vector<MapData> mapData;
 
+	std::pair<int, int> mainCountries;
+
+	Airfields TheaterAirfields;
 };

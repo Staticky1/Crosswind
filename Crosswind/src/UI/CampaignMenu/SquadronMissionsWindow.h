@@ -14,6 +14,8 @@ public:
 	virtual void OnUpdate(float deltaTime) override;
 
 	std::shared_ptr<CampaignContext> m_Context;
+	bool bMissionBriefingScreen = false;
+
 
 private:
 	CampaignData& m_CampaignData;
@@ -21,6 +23,7 @@ private:
 	bool bRequestNewMission = false;
 
 	bool bStartMission = false;
+
 
 	int& m_SelectedPlayerPilotIndex;
 

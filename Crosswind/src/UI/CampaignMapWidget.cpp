@@ -116,20 +116,18 @@ void CampaignMapWidget::Draw(const char* id, ImVec2 size) {
 
     // Draw map widgets
     for (const auto& item : items) {
-
-
         ImVec2 widgetSize = ImVec2(
             std::clamp(item.widgetSize.x * zoom, item.minSize * item.widgetSize.x, item.maxSize * item.widgetSize.x),
             std::clamp(item.widgetSize.y * zoom, item.minSize * item.widgetSize.y, item.maxSize * item.widgetSize.y)
         );
 
         ImVec2 screenPos = {
-        (topLeft.x + item.mapPosition.x * zoom) - widgetSize.x * 0.5f,
-        (topLeft.y + item.mapPosition.y * zoom) - widgetSize.y * 0.5f
+            (topLeft.x + item.mapPosition.x * zoom) - widgetSize.x * 0.5f,
+            (topLeft.y + item.mapPosition.y * zoom) - widgetSize.y * 0.5f
         };
 
         ImGui::SetCursorScreenPos(screenPos);
-        item.renderWidget(widgetSize);  // This can be any ImGui content (e.g., Button, Text, etc.)
+        item.renderWidget(screenPos, widgetSize);
     }
 
     ImGui::EndChild();
@@ -166,6 +164,11 @@ Vec3 CampaignMapWidget::GetCursorWorldPosition() const
 void CampaignMapWidget::UpdateFrontlines(std::vector<Frontlines> NewFrontlines)
 {
     CurrentFrontlines = NewFrontlines;
+}
+
+bool CampaignMapWidget::HasFrontlines()
+{
+    return CurrentFrontlines.size() > 0;
 }
 
 void CampaignMapWidget::ClearMapTexture()

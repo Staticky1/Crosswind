@@ -51,3 +51,8 @@ EWindowActions CrosswindWindow::GetRequestedAction()
 {
     return CurrentAction;
 }
+
+void CrosswindWindow::ResetRequestedAction()
+{
+    CurrentAction = EWindowActions::NONE;
+}

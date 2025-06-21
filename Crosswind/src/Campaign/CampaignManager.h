@@ -116,6 +116,8 @@ public:
 
 	int GenerateAircraftDamage(EEncounterResult resultType);
 
+	void GenerateMissionFile(CampaignData& inCampaignData, int& SelectedPlayerPilot, SquadronMission& inMission);
+
 private:
 	CampaignManager() = default;
 

@@ -29,6 +29,35 @@ float Core::DistanceToSegment2D(const Vec3& p, const Vec3& a, const Vec3& b)
     return std::sqrt(dx * dx + dz * dz);
 }
 
+std::pair<int, Vec3> Core::FindClosestPointOnPolyline2D(const Vec3& point, const std::vector<Vec3>& polyline)
+{
+    float closestDistance = FLT_MAX;
+    Vec3 closestPoint = {};
+    int closestIndex = -1;
+
+    for (size_t i = 0; i < polyline.size() - 1; ++i)
+    {
+        float dist = Core::DistanceToSegment2D(point, polyline[i], polyline[i + 1]);
+        if (dist < closestDistance)
+        {
+            closestDistance = dist;
+            closestIndex = static_cast<int>(i);
+            // Project point onto the segment
+            Vec3 a = polyline[i];
+            Vec3 b = polyline[i + 1];
+            Vec3 ab = { b.x - a.x, 0, b.z - a.z };
+            Vec3 ap = { point.x - a.x, 0, point.z - a.z };
+
+            float abLenSq = ab.x * ab.x + ab.z * ab.z;
+            float t = (abLenSq > 0.0f) ? std::clamp((ap.x * ab.x + ap.z * ab.z) / abLenSq, 0.0f, 1.0f) : 0.0f;
+
+            closestPoint = { a.x + ab.x * t, 0, a.z + ab.z * t };
+        }
+    }
+
+    return { closestIndex, closestPoint };
+}
+
 float Core::FlipDirection180(float degrees)
 {
     // Add 180 and wrap around using modulo
@@ -85,6 +114,12 @@ std::string Core::FloatToString(float value, int decimals)
 bool Core::StringContains(const std::string& text, const std::string& substring)
 {
     return text.find(substring) != std::string::npos;
+}
+
+std::filesystem::path Core::GetGamePath()
+{
+   std::filesystem::path returnpath(config.Get("General.GamePath", "E:/SteamLibrary/steamapps/common/IL-2 Sturmovik Battle of Stalingrad"));
+   return returnpath;
 }
 
 Vec3 Core::GetRandomPointBetween(const Vec3& a, const Vec3& b)
@@ -300,6 +335,41 @@ ImVec2 Core::Lerp(ImVec2 a, ImVec2 b, float t)
 float Core::Cross2D(const Vec3& a, const Vec3& b)
 {
     return a.x * b.z - a.z * b.x;
+}
+
+Vec3 Core::Normalize(const Vec3& v)
+{
+    float len = std::sqrt(v.x * v.x + v.z * v.z);
+    return len > 0 ? Vec3{ v.x / len, 0, v.z / len } : Vec3{ 0, 0, 0 };
+}
+
+Vec3 Core::Normalize2D(const Vec3& v)
+{
+    float len = Core::Length2D(v);
+    return len > 0 ? Vec3{ v.x / len, 0, v.z / len } : Vec3{ 0, 0, 0 };
+}
+
+Vec3 Core::Perpendicular2D(const Vec3& v)
+{
+    return Vec3{ -v.z, 0, v.x };
+}
+
+float Core::Length2D(const Vec3& v)
+{
+    return std::sqrt(v.x * v.x + v.z * v.z);
+}
+
+Vec3 Core::RotateXZ(const Vec3& position, float degrees)
+{
+    float radians = DegToRad(degrees);
+
+    float cosTheta = std::cos(radians);
+    float sinTheta = std::sin(radians);
+
+    float x = position.x * cosTheta - position.z * sinTheta;
+    float z = position.x * sinTheta + position.z * cosTheta;
+
+    return Vec3(x, position.y, z);  // Y remains unchanged
 }
 
 void Core::Shutdown() {

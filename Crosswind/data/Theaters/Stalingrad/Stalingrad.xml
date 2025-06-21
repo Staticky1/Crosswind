@@ -2,11 +2,20 @@
 
 <Theater name="Theater_Stalingrad" index="0">
 	<path>data/Theaters/Stalingrad/</path>
+	<MainAlliesCountry>101</MainAlliesCountry>
+	<MainAxisCountry>201</MainAxisCountry>
+	<Templates>
+		<Template path="StaticObjects/Stalingrad_ALL_Airfields.xml" />
+		<Template path="StaticObjects/Stalingrad_ALL_Towns.xml" />
+		<Template path="StaticObjects/Stalingrad_Bridges.xml" />
+		<Template path="StaticObjects/Stalingrad_City.xml" />
+		<Template path="StaticObjects/Stalingrad_RailwayStations.xml" />
+	</Templates>
 	<WorldMapSize width="358400" height="230400" />
 	<MapTextureSize width="5698" height="3658" />
 	<MapTexturePath>data/images/maps/StalingradMap.jpg</MapTexturePath>
 	<Services>
-		<AirService id="VVS" side="Allies" icon="data/images/services/VVS.jpg" nationality="Russia" pictures="Russian">
+		<AirService id="VVS" side="Allies" icon="data/images/services/VVS.jpg" nationality="Russia" pictures="Russian" country="101">
 			<Ranks>
 				<Rank id="VVS_szt" name="Serzhant" abbreviation="Szt." level="1" minScoreRequirement="0" />
 				<Rank id="VVS_sszt" name="Starshy Serzhant" abbreviation="SSzt." level="2" minScoreRequirement="10"/>
@@ -17,7 +26,7 @@
 				<Rank id="VVS_maj" name="Mayor" abbreviation="Maj." level="7" minScoreRequirement="150"/>
 			</Ranks>
 		</AirService>
-		<AirService id="Normandie" side="Allies" icon="data/images/services/Normandie.jpg" nationality="France" pictures="British">
+		<AirService id="Normandie" side="Allies" icon="data/images/services/Normandie.jpg" nationality="France" pictures="British" country="101">
 			<Ranks>
 				<Rank id="Normandie_slt" name="Sous-lieutenant" abbreviation="Slt." level="1" minScoreRequirement="0"/>
 				<Rank id="Normandie_lt" name="Lieutenant" abbreviation="Lt." level="2" minScoreRequirement="20"/>
@@ -26,7 +35,7 @@
 				<Rank id="Normandie_ltcol" name="Lieutenant-colonel" abbreviation="Lt.Col." level="5" minScoreRequirement="150"/>
 			</Ranks>
 		</AirService>
-		<AirService id="Luftwaffe" side="Axis" icon="data/images/services/Luftwaffe.jpg" nationality="Germany" pictures="German">
+		<AirService id="Luftwaffe" side="Axis" icon="data/images/services/Luftwaffe.jpg" nationality="Germany" pictures="German" country="201">
 			<Ranks>
 				<Rank id="Luft_uftz" name="Unterfeldwebel" abbreviation="Uffz." level="1" minScoreRequirement="0"/>
 				<Rank id="Luft_fw" name="Feldwebel" abbreviation="Fw." level="2" minScoreRequirement="10"/>
@@ -37,7 +46,7 @@
 				<Rank id="Luft_maj" name="Major" abbreviation="Maj." level="7" minScoreRequirement="150"/>
 			</Ranks>
 		</AirService>
-		<AirService id="Regia" side="Axis" icon="data/images/services/RA.jpg" nationality="Italy" pictures="Italian">
+		<AirService id="Regia" side="Axis" icon="data/images/services/RA.jpg" nationality="Italy" pictures="Italian" country="202">
 			<Ranks>
 				<Rank id="Regia_sgt" name="Sergente" abbreviation="Sgt." level="1" minScoreRequirement="0"/>
 				<Rank id="Regia_smagg" name="Sergente Maggiore" abbreviation="S.Magg." level="2" minScoreRequirement="12"/>

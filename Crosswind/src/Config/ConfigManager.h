@@ -57,9 +57,10 @@ public:
         return true;
     }
 
-    std::string Get(const std::string& sectionKey, const std::string& defaultValue = "") const {
+    std::string Get(const std::string& sectionKey, const std::string& defaultValue = "") {
         auto it = settings.find(sectionKey);
         if (it != settings.end()) return it->second;
+        Set(sectionKey, defaultValue);
         return defaultValue;
     }
 

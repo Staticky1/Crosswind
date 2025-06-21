@@ -43,9 +43,7 @@ void SquadronMissionsWindow::RenderContents()
 	{
 		for (auto& mission : playerSquadron.currentDaysMissions)
 		{		
-			std::sort(mission.AssignedPilots.begin(), mission.AssignedPilots.end(), [](const PilotData& a, const PilotData& b) {
-				return a.Rank.level > b.Rank.level;
-				});
+
 
 
 			ImVec2 TableSize = ImVec2(m_WindowSize.x - m_WindowSize.x * 0.5f, 0.f);

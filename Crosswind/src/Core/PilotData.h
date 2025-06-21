@@ -46,6 +46,12 @@ struct PilotVictory
 	std::string location = "Unknown";
 };
 
+struct AircraftLoadout
+{
+	std::string name;
+	int gameValue = 0;
+};
+
 struct SquadronAircraft
 {
 	std::string type;
@@ -54,6 +60,8 @@ struct SquadronAircraft
 	std::string skin;
 	std::vector<std::string> modifications;
 	int maintanceDuration = 0;
+	int loadoutIndex = 0;
+	std::vector<AircraftLoadout> availableLoadouts;
 };
 
 struct Rank {

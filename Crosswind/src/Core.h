@@ -14,15 +14,24 @@
 #include "Core/TextureGarbageCollector.h"
 #include "Localization/LocalizationManager.h"
 #include "Core/DateTime.h"
+#include "imSpinner/imspinner.h"
+
+//MissionResaver.exe -d "E:\SteamLibrary\steamapps\common\IL-2 Sturmovik Battle of Stalingrad\data" -f "E:\SteamLibrary\steamapps\common\IL-2 Sturmovik Battle of Stalingrad\data\Missions\Crosswind\Low Altitude CAP_1942_07_22_17_15.Mission"
+
+
 /*
 "E:\SteamLibrary\steamapps\common\IL-2 Sturmovik Battle of Stalingrad\bin\resaver\MissionResaver.exe"  -t   -d "E:\SteamLibrary\steamapps\common\IL-2 Sturmovik Battle of Stalingrad\data"  -f "E:\SteamLibrary\steamapps\common\IL-2 Sturmovik Battle of Stalingrad\data\Missions\PWCG\Moscow 1941-10-09.mission"
 
 Succeeded creating binary mission file for: "E:\SteamLibrary\steamapps\common\IL-2 Sturmovik Battle of Stalingrad\bin\resaver\MissionResaver.exe"  -t   -d "E:\SteamLibrary\steamapps\common\IL-2 Sturmovik Battle of Stalingrad\data"  -f "E:\SteamLibrary\steamapps\common\IL-2 Sturmovik Battle of Stalingrad\data\Missions\PWCG\Moscow 1941-10-09.mission"
 */
+//MissionResaver.exe -t -d "E:\SteamLibrary\steamapps\common\IL-2 Sturmovik Battle of Stalingrad/data" -f "E:\SteamLibrary\steamapps\common\IL-2 Sturmovik Battle of Stalingrad\data\Missions\Crosswind\Low Altitude CAP_1942_07_22_17_15.mission"
+// "E:\SteamLibrary\steamapps\common\IL-2 Sturmovik Battle of Stalingrad\bin\resaver\MissionResaver.exe"  -t   -d "E:\SteamLibrary\steamapps\common\IL-2 Sturmovik Battle of Stalingrad/data"  -f "E:\SteamLibrary\steamapps\common\IL-2 Sturmovik Battle of Stalingrad\data\Missions\Crosswind\Low Altitude CAP_1942_07_22_17_15.mission"
 
 constexpr auto CROSS_VERSION = 0.0;
 #define CONFIG Core::Instance().GetConfig()
 #define LOC    Core::Instance().GetLocalizationManager()
+
+#define PLAYERCOLOUR  ImVec4(1.0f, 0.85f, 0.0f, 1.0f)
 
 //simple struct with a start date and value param
 struct ValueStartDate
@@ -39,6 +48,44 @@ struct Vec3 {
         , y(InY)
         , z(InZ)
     {}
+
+    // Addition
+    Vec3 operator+(const Vec3& other) const {
+        return { x + other.x, y + other.y, z + other.z };
+    }
+
+    // Subtraction
+    Vec3 operator-(const Vec3& other) const {
+        return { x - other.x, y - other.y, z - other.z };
+    }
+
+    // Scalar multiplication (Vec3 * float)
+    Vec3 operator*(float scalar) const {
+        return { x * scalar, y * scalar, z * scalar };
+    }
+
+    // Scalar multiplication (float * Vec3)
+    friend Vec3 operator*(float scalar, const Vec3& v) {
+        return v * scalar;
+    }
+
+    // In-place addition
+    Vec3& operator+=(const Vec3& other) {
+        x += other.x; y += other.y; z += other.z;
+        return *this;
+    }
+
+    // In-place subtraction
+    Vec3& operator-=(const Vec3& other) {
+        x -= other.x; y -= other.y; z -= other.z;
+        return *this;
+    }
+
+    // In-place scalar multiplication
+    Vec3& operator*=(float scalar) {
+        x *= scalar; y *= scalar; z *= scalar;
+        return *this;
+    }
 
 };
 
@@ -128,6 +175,16 @@ public:
 
     static ImVec2 Lerp(ImVec2 a, ImVec2 b, float t);
     static float Cross2D(const Vec3& a, const Vec3& b);
+    static Vec3 Normalize(const Vec3& v);
+    static Vec3 Normalize2D(const Vec3& v);
+    static Vec3 Perpendicular2D(const Vec3& v);
+    static float Length2D(const Vec3& v);
+
+    static constexpr float DegToRad(float degrees) {
+        return degrees * 3.14159265f / 180.0f;
+    }
+
+    static Vec3 RotateXZ(const Vec3& position, float degrees);
 
     // --- Distance between two ImVec2 points (2D) ---
     static inline float GetShortestDistance(const ImVec2& a, const ImVec2& b)
@@ -146,7 +203,10 @@ public:
     }
 
     static float DistanceToSegment2D(const Vec3& p, const Vec3& a, const Vec3& b);
-    
+    static std::pair<int, Vec3> FindClosestPointOnPolyline2D(const Vec3& point, const std::vector<Vec3>& polyline);
+
+
+
     static float FlipDirection180(float degrees);
     static std::string GetCardinalDirection(float degrees);
 
@@ -157,6 +217,8 @@ public:
     static std::string CompileNewsStrings(std::vector<std::string>& inStrings);
     static std::string FloatToString(float value, int decimals);
     static bool StringContains(const std::string& text, const std::string& substring);
+
+    std::filesystem::path GetGamePath();
 
 private:
     Core();

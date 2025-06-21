@@ -33,6 +33,7 @@ public:
 	void Close();
 
 	EWindowActions GetRequestedAction();
+	void ResetRequestedAction();
 
 protected:
 	std::string m_Name;
@@ -42,4 +43,5 @@ protected:
 	ImVec2 m_WindowSize = ImVec2(200, 200);
 	ImVec2 m_WindowPos = ImVec2(0, 0);
 	EWindowActions CurrentAction = NONE;
+	
 };

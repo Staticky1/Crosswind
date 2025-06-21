@@ -47,6 +47,17 @@ struct DateTime
         return ToDateString() + " " + ToTimeString();
     }
 
+    std::string ToFilenameSafeString() const
+    {
+        std::ostringstream oss;
+        oss << std::setw(4) << std::setfill('0') << year << "_"
+            << std::setw(2) << std::setfill('0') << month << "_"
+            << std::setw(2) << std::setfill('0') << day << "_"
+            << std::setw(2) << std::setfill('0') << hour << "_"
+            << std::setw(2) << std::setfill('0') << minute;
+        return oss.str();
+    }
+
     static bool IsOngoing(const DateTime& currentTime, const DateTime& StartingTime, const DateTime& EndingTime)
     {
         return (currentTime >= StartingTime && currentTime < EndingTime);

@@ -3,7 +3,7 @@
 #include "Campaign/CampaignManager.h"
 #include <set>
 
-MissionPlan MissionPlanGenerator::CreateMissionPlan(Theater* theater, const Squadron& squadron, const DateTime& currentDateTime, float maxRangeMod)
+MissionPlan MissionPlanGenerator::CreateMissionPlan(Theater* theater, const Squadron& squadron, const DateTime& currentDateTime, const WeatherInfo& currentWeather, float maxRangeMod)
 {
     //Select Mission Type
     const auto* selectedMissionTypes = Core::GetActiveEntryRef<std::pair<DateTime, std::vector<SquadronMissionType>>>(
@@ -41,7 +41,7 @@ MissionPlan MissionPlanGenerator::CreateMissionPlan(Theater* theater, const Squa
      const AircraftData* aircraftData = CampaignManager::Instance().GetAircraftByType(AircraftValue->value);
      float maxWaypointRange = aircraftData->range * 500.0f;
      
-     const Airfield selectedAirfield = theater->GetAirfields()->LoadedAirfields.at(AirfieldValue->value);
+     const Airfield selectedAirfield = theater->GetAirfields(currentDateTime)->LoadedAirfields.at(AirfieldValue->value);
      
      std::string enemySide = squadron.side == "Allies" ? "Axis" : "Allies";
      //mission locaion will vary depending on mission type
@@ -141,16 +141,22 @@ MissionPlan MissionPlanGenerator::CreateMissionPlan(Theater* theater, const Squa
                  }
                  
              }
+             //weight by distance
+             std::vector<float> distanceScores;
+             std::vector<Vec3> airfieldLocs;
+             airfieldLocs.push_back(selectedAirfield.position);
+             float minDistanceMod = 10000.0f;
+             distanceScores = ScorePointsByProximity(candidates, airfieldLocs, minDistanceMod, maxWaypointRange);
 
              if (scores.size() == 0)
              {
-                 for (int i = 0; i < candidates.size(); ++i)
+                 for (int i = 0; i < scores.size(); i++)
                  {
-                     scores.push_back(1);
+                     distanceScores[i] = distanceScores[i] * scores[i];
                  }
              }
                  
-             int selectedIndex = Core::GetWeightedRandomIndex(scores);
+             int selectedIndex = Core::GetWeightedRandomIndex(distanceScores);
 
              MissionPlan NewPlan;
              NewPlan.missionType.type = selectedType;
@@ -159,6 +165,29 @@ MissionPlan MissionPlanGenerator::CreateMissionPlan(Theater* theater, const Squa
              NewPlan.missionArea.worldPosition = candidates[selectedIndex];
              NewPlan.missionDate = currentDateTime;
              GenerateMissionNameAndDescription(NewPlan);
+             std::vector<Frontlines> allFrontlines = theater->GetFrontlines(currentDateTime);
+             int frontlineIndex = -1;
+             int shortestDistance = 999999;
+             for (int i = 0;i < allFrontlines.size(); ++i)
+             {
+                 if (allFrontlines[i].side != squadron.side)
+                 {
+                     int distance = Core::FindClosestPointOnPolyline2D(candidates[selectedIndex], allFrontlines[i].points).first;
+                     if (distance < shortestDistance)
+                     {
+                         shortestDistance = distance;
+                         frontlineIndex = i;
+                     }
+                 }
+             }
+                 
+             if (frontlineIndex != -1)
+             {
+                 float speed = aircraftData->cruisingSpeed;
+                 float altitude = selectedType == EMissionType::CAP_LOW ? currentWeather.cloudBase - 50 : Core::GetRandomInt(3000,4000);
+                 NewPlan.missionWaypoints = GenerateCAPFrontlineWaypoints(selectedAirfield, candidates[selectedIndex], allFrontlines[frontlineIndex].points, 10000, 10000, 30000, altitude, speed);
+             }
+                
              return NewPlan;
              break;
          }
@@ -291,6 +320,10 @@ std::vector<const PilotData*> MissionPlanGenerator::GetAvailablePilotsForMission
     {
         selected.push_back(available[i]);
     }
+
+    std::sort(selected.begin(), selected.end(), [](const PilotData* a, const PilotData* b) {
+        return a->Rank.level > b->Rank.level;
+        });
 
     return selected;
 }
@@ -469,3 +502,165 @@ void MissionPlanGenerator::UpdateMissionPlan(const Squadron& squadronData, Squad
     mission.assignedAircraft = std::move(updatedAircraft);
 }
 
+std::vector<MissionWaypoint> MissionPlanGenerator::GenerateCAPFrontlineWaypoints(
+    const Airfield& airfield,
+    const Vec3& missionArea,
+    const std::vector<Vec3>& frontlinePoints,
+    float patrolStepDistance,
+    float crossDistance, float maxTotalDistance,
+    float patrolAltitude,
+    float patrolSpeed)
+{
+    std::vector<MissionWaypoint> waypoints;
+
+    auto addWaypoint = [&](const std::string& name, const Vec3& pos, const float altitude, const float speed, const int priority, bool inCanBeEdited = false) {
+        MissionWaypoint newWaypoint;
+        newWaypoint.name = name;
+        newWaypoint.WorldLocation = Vec3(pos.x,altitude,pos.z);
+        newWaypoint.speed = speed;
+        newWaypoint.Priority = priority;
+        newWaypoint.canBeEdited = inCanBeEdited;
+        return newWaypoint;
+        };
+
+    // 1. Add Takeoff
+    Vec3 runwayDir = Core::Normalize(airfield.runways.endPos - airfield.runways.startPos); // Direction vector along the runway
+    Vec3 takeoffPos = airfield.runways.endPos + runwayDir * 500.0f;        // 500m beyond the end
+    waypoints.push_back(addWaypoint("Takeoff", takeoffPos, 300, patrolSpeed, 2));
+
+    // 2. Ingress: offset perpendicular to direction from airfield to mission area
+    Vec3 toMission = missionArea - airfield.position;
+    Vec3 toMission2D = { toMission.x, 0, toMission.z };
+
+    Vec3 dirNormalized = Core::Normalize(toMission2D);
+    Vec3 perpendicular = Core::Perpendicular2D(dirNormalized); // 90 degrees to the right
+
+    float ingressOffsetDistance = 5000.0f; // You can parameterize this if needed
+
+    Vec3 offsetPos = missionArea + perpendicular * ingressOffsetDistance;
+    // 3. Place ingress 90% of the way from airfield to offset point
+    Vec3 ingressPos = airfield.position + (offsetPos - airfield.position) * 0.9f;
+    waypoints.push_back(addWaypoint("Ingress", ingressPos, patrolAltitude, patrolSpeed, 0, true));
+
+    // 4. Determine closest point on frontline
+    auto [closestIndex, projectedPoint] = Core::FindClosestPointOnPolyline2D(missionArea, frontlinePoints);
+    if (closestIndex == -1) return waypoints; // Fallback
+
+
+    // Measure distance in both directions
+    float distForward = 0.0f;
+    for (int i = closestIndex + 1; i < frontlinePoints.size(); ++i) {
+        distForward += Core::GetShortestDistance(frontlinePoints[i - 1], frontlinePoints[i]);
+    }
+
+    float distBackward = 0.0f;
+    for (int i = closestIndex - 1; i >= 0; --i) {
+        distBackward += Core::GetShortestDistance(frontlinePoints[i + 1], frontlinePoints[i]);
+    }
+
+    // Determine direction
+    enum class WalkDirection { Forward = 1, Backward = -1 };
+    WalkDirection walkDir =
+        (distForward < maxTotalDistance * 0.5f && distBackward > distForward) ? WalkDirection::Backward :
+        (distBackward < maxTotalDistance * 0.5f && distForward > distBackward) ? WalkDirection::Forward :
+        (Core::GetWeightedRandomBool(0.5) ? WalkDirection::Forward : WalkDirection::Backward);
+    
+    // 1. Start at projectedPoint
+    Vec3 currentPos = projectedPoint;
+    waypoints.push_back(addWaypoint("CAP Start", currentPos, patrolAltitude, patrolSpeed, 0, false));
+    int wpCounter = 1;
+    float totalDistance = 0.0f;
+    float remainingStep = patrolStepDistance;
+
+    int idx = closestIndex;
+    int dir = (walkDir == WalkDirection::Forward) ? 1 : -1;
+
+    // Handle first partial segment specially
+    {
+        int nextIdx = idx + dir;
+        if (nextIdx < 0 || nextIdx >= frontlinePoints.size()) return waypoints;
+
+        Vec3 segEnd = frontlinePoints[nextIdx];
+        Vec3 segmentVec = segEnd - currentPos;
+        float segLength = Core::GetShortestDistance(currentPos, segEnd);
+        Vec3 segmentDir = Core::Normalize2D(segmentVec);
+
+        float distLeft = segLength;
+
+        while (distLeft >= remainingStep) {
+            currentPos = currentPos + segmentDir * remainingStep;
+            totalDistance += patrolStepDistance;
+            if (totalDistance > maxTotalDistance) return waypoints;
+            waypoints.push_back(addWaypoint("CAP WP " + std::to_string(wpCounter++), currentPos, patrolAltitude, patrolSpeed, 0, true));
+            distLeft -= remainingStep;
+            remainingStep = patrolStepDistance;
+        }
+
+        remainingStep -= distLeft;
+        currentPos = segEnd;
+        idx = nextIdx;
+    }
+
+    while (true) {
+        int nextIdx = idx + dir;
+        if (nextIdx < 0 || nextIdx >= frontlinePoints.size()) break;
+
+        Vec3 segStart = frontlinePoints[idx];
+        Vec3 segEnd = frontlinePoints[nextIdx];
+        Vec3 segmentVec = segEnd - segStart;
+        float segLength = Core::GetShortestDistance(segStart, segEnd);
+
+        Vec3 segmentDir = Core::Normalize2D(segmentVec);
+
+        // Move along this segment
+        float segProgress = Core::GetShortestDistance(segStart, currentPos);
+        float remainingInSegment = segLength - segProgress;
+
+        while (remainingInSegment >= remainingStep) {
+            currentPos = currentPos + segmentDir * remainingStep;
+            totalDistance += patrolStepDistance;
+
+            if (totalDistance > maxTotalDistance) break;
+            waypoints.push_back(addWaypoint("CAP WP " + std::to_string(wpCounter++), currentPos, patrolAltitude, patrolSpeed, 0, true));
+            remainingInSegment -= remainingStep;
+            remainingStep = patrolStepDistance; // reset step size
+        }
+
+        if (totalDistance > maxTotalDistance) break;
+
+        // Use up the rest of the segment
+        currentPos = segEnd;
+        remainingStep -= remainingInSegment;
+        idx = nextIdx;
+    }
+
+    if (!waypoints.empty()) {
+        const Vec3& lastCAP = waypoints.back().WorldLocation;
+
+        // Direction from patrol end to airfield
+        Vec3 toAirfield = Core::Normalize2D(airfield.position - lastCAP);
+
+        // Perpendicular direction (toward airfield)
+        Vec3 perp = Core::Perpendicular2D(toAirfield);
+
+        // Try both perpendiculars and pick the one that points closer to the airfield
+        Vec3 offsetA = lastCAP + perp * crossDistance;
+        Vec3 offsetB = lastCAP - perp * crossDistance;
+
+        float distA = Core::GetShortestDistance(offsetA, airfield.position);
+        float distB = Core::GetShortestDistance(offsetB, airfield.position);
+
+        Vec3 egressOffsetPos = (distA < distB) ? offsetA : offsetB;
+
+        Vec3 egressPos = egressOffsetPos + (airfield.position - egressOffsetPos) * 0.1f;
+        waypoints.push_back(addWaypoint("Egress", egressPos, patrolAltitude, patrolSpeed, 1, true));
+
+        Vec3 approachPos = egressPos + (airfield.position - egressPos) * 0.9f;
+        waypoints.push_back(addWaypoint("Approach", approachPos, patrolAltitude, patrolSpeed, 1, true));
+    }
+
+    // Final landing waypoint
+    waypoints.push_back(addWaypoint("Land", airfield.position, 300, patrolSpeed, 1));
+
+    return waypoints;
+}

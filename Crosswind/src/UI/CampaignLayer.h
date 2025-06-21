@@ -5,6 +5,7 @@
 #include "UI/Windows/MissionBriefingWindow.h"
 #include "UI/Windows/NewsPopup.h"
 #include "UI/WindowContexts/MissionContext.h"
+#include <future>
 
 
 class CampaignLayer : public CrosswindLayer
@@ -23,12 +24,20 @@ public:
 	void ClearNewsItems();
 
 private:
+	void StartMissionBuildCommandASync();
+	void DrawLoadingPopup();
+
+	bool bShowMissionGenerationLoading = false;
+	bool isRunningCommand = false;
+	std::future<void> commandFuture;
+
 	std::shared_ptr<CampaignContext> m_CampaignContext;
 	std::shared_ptr<MissionContext> m_MissionContext;
 	int m_SelectedPlayerPilotIndex = 0;
 	SquadronMission* m_CurrentMission = nullptr;
 	int m_SelectedTabIndex = 0;
 
+	
 
 	std::unique_ptr<MissionBriefingWindow> m_MissionBriefingWindow;
 

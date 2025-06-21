@@ -3,6 +3,7 @@
 #include "UI/CrosswindWindow.h"
 #include "UI/WindowContexts/MissionContext.h"
 #include "Campaign/CampaignManager.h"
+#include "UI/CampaignMapWidget.h"
 
 class MissionBriefingWindow : public CrosswindWindow
 {
@@ -27,4 +28,8 @@ private:
 	int briefingStage = 0; 
 
 	void DisplayWindProfile(const WindProfile& wind);
+
+	CampaignMapWidget MapWidget;
+	bool hasAddedWaypoints = false;
+	bool bGenerateMission = false;
 };

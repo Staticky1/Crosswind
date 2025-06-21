@@ -10,11 +10,12 @@
 #include "Core/Theater.h"
 
 struct MapItem {
+    std::string id;
     ImVec2 mapPosition;                         // Coordinates in map space
     ImVec2 widgetSize;
     float maxSize = 1.0f;
     float minSize = 0.25f;
-    std::function<void(ImVec2 scaledSize)> renderWidget;         // Lambda that renders UI
+    std::function<void(ImVec2 screenPos, ImVec2 scaledSize)> renderWidget;       // Lambda that renders UI
 };
 
 struct AirfieldWidget {
@@ -39,7 +40,7 @@ public:
     Vec3 GetCursorWorldPosition() const;
 
     void UpdateFrontlines(std::vector<Frontlines> NewFrontlines);
-
+    bool HasFrontlines();
     void ClearMapTexture();
 
 private:

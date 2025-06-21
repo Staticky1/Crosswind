@@ -149,6 +149,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Campaign\CampaignManager.cpp" />
+    <ClCompile Include="src\Campaign\Mission\Generation\FakeAirfield.cpp" />
+    <ClCompile Include="src\Campaign\Mission\Generation\MCU\MCUObject.cpp" />
+    <ClCompile Include="src\Campaign\Mission\Generation\MissionFileWriter.cpp" />
+    <ClCompile Include="src\Campaign\Mission\Generation\MissionGroup.cpp" />
+    <ClCompile Include="src\Campaign\Mission\Generation\MissionObject.cpp" />
+    <ClCompile Include="src\Campaign\Mission\Generation\MissionOptions.cpp" />
+    <ClCompile Include="src\Campaign\Mission\Generation\Resaver.cpp" />
+    <ClCompile Include="src\Campaign\Mission\Generation\WorldObject.cpp" />
     <ClCompile Include="src\Campaign\Mission\MissionPlanGenerator.cpp" />
     <ClCompile Include="src\Campaign\NewPilot.cpp" />
     <ClCompile Include="src\Core.cpp" />
@@ -180,6 +188,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Campaign\CampaignManager.h" />
+    <ClInclude Include="src\Campaign\Mission\Generation\FakeAirfield.h" />
+    <ClInclude Include="src\Campaign\Mission\Generation\MCU\MCUObject.h" />
+    <ClInclude Include="src\Campaign\Mission\Generation\MissionGroup.h" />
+    <ClInclude Include="src\Campaign\Mission\Generation\Resaver.h" />
+    <ClInclude Include="src\Campaign\Mission\Generation\WorldObject.h" />
+    <ClInclude Include="src\Campaign\Mission\Generation\MissionFileWriter.h" />
+    <ClInclude Include="src\Campaign\Mission\Generation\MissionObject.h" />
+    <ClInclude Include="src\Campaign\Mission\Generation\MissionOptions.h" />
+    <ClInclude Include="src\Campaign\Mission\MissionBuildData.h" />
     <ClInclude Include="src\Campaign\Mission\MissionPlanGenerator.h" />
     <ClInclude Include="src\Campaign\Mission\MissionType.h" />
     <ClInclude Include="src\Campaign\NewPilot.h" />
@@ -192,6 +209,7 @@
     <ClInclude Include="src\Core\DateTime.h" />
     <ClInclude Include="src\Core\EnumHelpers.h" />
     <ClInclude Include="src\date\date.h" />
+    <ClInclude Include="src\imSpinner\imspinner.h" />
     <ClInclude Include="src\UI\CampaignLayer.h" />
     <ClInclude Include="src\UI\CampaignMenu\PlayerPilotsWindow.h" />
     <ClInclude Include="src\UI\CampaignMenu\SquadronInfoWindow.h" />

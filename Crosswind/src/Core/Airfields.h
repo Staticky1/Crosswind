@@ -29,6 +29,7 @@ struct Airfield {
     Vec3 position;
     Orientation orientation;
     RunwayData runways;
+    int country = 0;
 };
 
 class Airfields 

@@ -139,7 +139,7 @@ void SquadronInfoWindow::DrawPilotTable(std::vector<PilotData>& pilots, EPilotSt
 
 		ImGui::TableHeadersRow();
 
-		ImVec4 PlayerRowColour = ImVec4(1.0f, 0.85f, 0.0f, 1.0f);
+		ImVec4 PlayerRowColour = PLAYERCOLOUR;
 
 		for (PilotData* pilot : readyPilots)
 		{

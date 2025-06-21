@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core.h"
+#include "MissionBuildData.h"
 
 enum class EMissionType {
     NONE,
@@ -32,7 +33,7 @@ struct MissionPlan {
     DateTime missionDate;
     MissionTemplate missionType;
     MissionTargetArea missionArea;
-    
+    std::vector<MissionWaypoint> missionWaypoints;
 };
 
 struct MissionRequirements

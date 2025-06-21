@@ -115,7 +115,7 @@ void SelectSquadronWindow::RenderContents()
 
 			if (!airfieldWidgets.contains(airfieldName)) {
 				AirfieldWidget widget;
-				widget.mapPos = MapWidget.WorldPosToMapPos(m_CampaignData.LoadedTheater.TheaterAirfields.LoadedAirfields.at(airfieldName).position);
+				widget.mapPos = MapWidget.WorldPosToMapPos(m_CampaignData.LoadedTheater.GetAirfields(m_CampaignData.StartDate)->LoadedAirfields.at(airfieldName).position);
 				airfieldWidgets[airfieldName] = widget;
 			}
 
@@ -142,9 +142,9 @@ void SelectSquadronWindow::RenderContents()
 				{
 					.mapPosition = widget.mapPos,
 					.widgetSize = ImVec2(64,64),
-					.renderWidget = [icons = widget.squadronIcons, onClick = onSquadronClicked](ImVec2 size)
+					.renderWidget = [icons = widget.squadronIcons, onClick = onSquadronClicked](ImVec2 screenPos, ImVec2 size)
 					{
-						ImVec2 cursorStart = ImGui::GetCursorScreenPos();
+						ImVec2 cursorStart = screenPos;
 
 						int iconCount = static_cast<int>(icons.size());
 						float spacing = 4.0f;
@@ -163,11 +163,11 @@ void SelectSquadronWindow::RenderContents()
 						for (size_t i = 0; i < icons.size(); ++i)
 						{
 							const auto& [image, squadron] = icons[i];
-							ImGui::SetCursorScreenPos(
-							{
-								cursorStart.x + i * (size.x + 4.0f), // horizontal spacing
+							ImVec2 iconPos = {
+								cursorStart.x + i * (size.x + spacing),
 								cursorStart.y
-							});
+							};
+							ImGui::SetCursorScreenPos(iconPos);
 
 							ImGui::PushID((void*)squadron);
 							if (ImGui::InvisibleButton("##SquadronIcon", size))
@@ -213,7 +213,7 @@ void SelectSquadronWindow::RenderContents()
 			[](const ValueStartDate& e) { return e.startDate; }
 		);
 
-		Airfield SquadronAirfield = m_CampaignData.LoadedTheater.TheaterAirfields.LoadedAirfields.at(AirfieldValue->value);
+		Airfield SquadronAirfield = m_CampaignData.LoadedTheater.GetAirfields(m_CampaignData.StartDate)->LoadedAirfields.at(AirfieldValue->value);
 		ImVec2 SquadronLocation = MapWidget.WorldPosToMapPos(SquadronAirfield.position);
 
 		MapWidget.LerpToMapPosition(SquadronLocation, 5.0f);
@@ -312,9 +312,9 @@ void SelectSquadronWindow::OnUpdate(float deltaTime)
 	}
 
 	//load airfield data
-	if (m_CampaignData.LoadedTheater.TheaterAirfields.LoadedAirfields.size() == 0)
+	if (m_CampaignData.LoadedTheater.GetAirfields(m_CampaignData.StartDate)->LoadedAirfields.size() == 0)
 	{
-		m_CampaignData.LoadedTheater.LoadAirfields();
+		m_CampaignData.LoadedTheater.LoadAirfields(m_CampaignData.StartDate);
 	}
 
 	m_Initilized = true;

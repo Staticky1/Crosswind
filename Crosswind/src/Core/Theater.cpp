@@ -35,6 +35,18 @@ void Theater::LoadTheaterFromFile(const std::string& filePath)
 	}
 	path = PathElm->GetText();
 
+	tinyxml2::XMLElement* TemplatesElm = root->FirstChildElement("Templates");
+	for (tinyxml2::XMLElement* TemplateElm = TemplatesElm->FirstChildElement("Template");
+		TemplateElm != nullptr;
+		TemplateElm = TemplateElm->NextSiblingElement("Template")) {
+		missionTemplates.push_back(TemplateElm->Attribute("path"));
+	}
+	
+	tinyxml2::XMLElement* AlliesElm = root->FirstChildElement("MainAlliesCountry");
+	mainCountries.first = AlliesElm->IntText();
+	tinyxml2::XMLElement* AxisElm = root->FirstChildElement("MainAxisCountry");
+	mainCountries.second = AxisElm->IntText();
+
 	tinyxml2::XMLElement* phasesElem = root->FirstChildElement("Phases");
 	if (!phasesElem) {
 		std::cerr << "No <Phases> section found." << std::endl;
@@ -150,6 +162,8 @@ void Theater::LoadTheaterFromFile(const std::string& filePath)
 
 		const char* picture = serviceElem->Attribute("pictures");
 		AirService.picture = picture ? picture : "Nopicture";
+
+		serviceElem->QueryIntAttribute("country", &AirService.country);
 
 		tinyxml2::XMLElement* ranksElem = serviceElem->FirstChildElement("Ranks");
 		for (tinyxml2::XMLElement* rankElem = ranksElem->FirstChildElement("Rank");
@@ -404,10 +418,46 @@ Rank Theater::GetRankFromID(std::string InputId)
 	return Rank();
 }
 
-void Theater::LoadAirfields()
+void Theater::LoadAirfields(DateTime time)
 {
 	std::string AirfieldsPath = path + ("Airfields.xml");
 	TheaterAirfields.LoadAirfields(AirfieldsPath);
+
+	float minDistanceToBeActive = 5000.0f;
+
+	//assign a side to each airfield
+	for (auto& i : TheaterAirfields.LoadedAirfields)
+	{
+		std::pair<std::string,float> results = GetPointSideFromFrontlines(i.second.position, GetFrontlines(time));
+		if (results.second >= minDistanceToBeActive)
+		{
+			//check if a squadron is based at this airfield
+			for (const auto& squad : AllSquadrons)
+			{
+				const auto* AirfieldValue = Core::GetActiveEntryRef<ValueStartDate>(
+					squad.locations,
+					time,
+					[](const ValueStartDate& e) { return e.startDate; }
+				);
+				std::string currentAirfield = AirfieldValue->value;
+
+				if (currentAirfield == i.first)
+				{
+					i.second.country = GetServiceFromID(squad.service).country;
+				}
+
+			}
+
+			if (i.second.country == 0)
+			{
+				i.second.country = results.first == "Allies" ? mainCountries.first : mainCountries.second;
+			}
+		}
+		else
+		{
+			i.second.country = 0;
+		}
+	}
 }
 
 void Theater::LoadFrontLines(DateTime date)
@@ -455,10 +505,10 @@ void Theater::LoadFrontLines(DateTime date)
 	}
 }
 
-const Airfields* Theater::GetAirfields()
+const Airfields* Theater::GetAirfields(DateTime time)
 {
 	if (TheaterAirfields.LoadedAirfields.size() == 0)
-		LoadAirfields();
+		LoadAirfields(time);
 
 	return &TheaterAirfields;
 }
@@ -655,7 +705,7 @@ WindProfile Theater::GenerateRandomWindProfile(float windMax, unsigned seed)
 	std::uniform_real_distribution<float> turbDist(0.0f, 2.0f);         // turbulence noise
 
 	WindProfile profile;
-	std::vector<int> altitudes = { 500, 1000, 2000, 5000 };
+	std::vector<int> altitudes = {0, 500, 1000, 2000, 5000 };
 	profile.windLevels.reserve(altitudes.size());
 
 	float baseDirection = dirDist(rng);
